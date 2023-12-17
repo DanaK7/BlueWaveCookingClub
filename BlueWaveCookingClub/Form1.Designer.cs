@@ -103,6 +103,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmWelcome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome Form";
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
             this.panel1.ResumeLayout(false);

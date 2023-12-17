@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BlueWaveCookingClub
 {
-    public partial class FrmRegister : Form
+    public partial class FrmRegister1 : Form
     {
-        public FrmRegister()
+        public FrmRegister1()
         {
             InitializeComponent();
         }

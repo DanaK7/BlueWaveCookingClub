@@ -109,6 +109,7 @@
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtUsername
             // 
@@ -138,6 +139,7 @@
             this.linklblReg.TabIndex = 9;
             this.linklblReg.TabStop = true;
             this.linklblReg.Text = "Register";
+            this.linklblReg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblReg_LinkClicked);
             // 
             // lblReg
             // 
@@ -161,6 +163,7 @@
             this.rbtnShow.TabStop = true;
             this.rbtnShow.Text = "Show";
             this.rbtnShow.UseVisualStyleBackColor = true;
+            this.rbtnShow.CheckedChanged += new System.EventHandler(this.rbtnShow_CheckedChanged);
             // 
             // panel1
             // 
@@ -194,7 +197,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
