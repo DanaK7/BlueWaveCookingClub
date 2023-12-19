@@ -360,6 +360,7 @@
             this.Controls.Add(this.lblLastna);
             this.Controls.Add(this.lblFirstna);
             this.Name = "FrmAdminPanel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Panel";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

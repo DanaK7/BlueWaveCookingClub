@@ -318,6 +318,7 @@
             this.Controls.Add(this.lblCookExp);
             this.Controls.Add(this.panel1);
             this.Name = "FrmRegister2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration 2";
             this.ResumeLayout(false);
             this.PerformLayout();

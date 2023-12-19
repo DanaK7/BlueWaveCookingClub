@@ -352,6 +352,7 @@
             this.Controls.Add(this.lblMemberreg1);
             this.Controls.Add(this.panel1);
             this.Name = "FrmRegister1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration Form 1";
             this.ResumeLayout(false);
             this.PerformLayout();
