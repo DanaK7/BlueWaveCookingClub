@@ -66,7 +66,7 @@ namespace BlueWaveCookingClub
             txtPassword.Clear();
         }
 
-        private void rbtnShow_CheckedChanged(object sender, EventArgs e)
+        private void chbShow_CheckedChanged(object sender, EventArgs e)
         {
             // Toggle password visibility
             txtPassword.PasswordChar = chbShow.Checked ? '\0' : '*';
@@ -87,6 +87,8 @@ namespace BlueWaveCookingClub
             registrationForm1.Show();
 
         }
+
+       
     }
 
 }

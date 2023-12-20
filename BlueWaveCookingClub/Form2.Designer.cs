@@ -182,6 +182,7 @@
             this.chbShow.TabIndex = 1;
             this.chbShow.Text = "Show";
             this.chbShow.UseVisualStyleBackColor = true;
+            this.chbShow.CheckedChanged += new System.EventHandler(this.chbShow_CheckedChanged);
             // 
             // FrmLogin
             // 
