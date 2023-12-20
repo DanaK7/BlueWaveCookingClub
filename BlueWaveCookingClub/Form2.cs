@@ -69,7 +69,7 @@ namespace BlueWaveCookingClub
         private void chbShow_CheckedChanged(object sender, EventArgs e)
         {
             // Toggle password visibility
-         
+
             txtPassword.PasswordChar = chbShow.Checked ? '\0' : '*';
 
             // Reset the CheckBox after the password is changed
@@ -82,17 +82,25 @@ namespace BlueWaveCookingClub
             chbShow.Checked = false;
         }
 
-        private void linklblReg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
-            // Click event for the registration link label
-            FrmRegister1 registrationForm1 = new FrmRegister1();
+            // Reset the "Show" button
+            chbShow.Checked = false;
 
-            // Show the Registration Form 1.
-            registrationForm1.Show();
+
 
         }
+        private void linklblReg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+            {
+                // Click event for the registration link label
+                FrmRegister1 registrationForm1 = new FrmRegister1();
 
-       
+                // Show the Registration Form 1 as a modal dialog.
+                registrationForm1.ShowDialog();
+            }
+
+
+        
     }
 
 }
