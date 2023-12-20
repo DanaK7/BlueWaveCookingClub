@@ -103,7 +103,7 @@
             // lblLastna
             // 
             this.lblLastna.AutoSize = true;
-            this.lblLastna.Location = new System.Drawing.Point(633, 116);
+            this.lblLastna.Location = new System.Drawing.Point(702, 116);
             this.lblLastna.Name = "lblLastna";
             this.lblLastna.Size = new System.Drawing.Size(27, 13);
             this.lblLastna.TabIndex = 4;
@@ -158,7 +158,7 @@
             // 
             this.txtFirstna.Location = new System.Drawing.Point(526, 93);
             this.txtFirstna.Name = "txtFirstna";
-            this.txtFirstna.Size = new System.Drawing.Size(85, 20);
+            this.txtFirstna.Size = new System.Drawing.Size(150, 20);
             this.txtFirstna.TabIndex = 16;
             // 
             // cbSuffix
@@ -171,9 +171,9 @@
             // 
             // txtLastna
             // 
-            this.txtLastna.Location = new System.Drawing.Point(636, 93);
+            this.txtLastna.Location = new System.Drawing.Point(698, 92);
             this.txtLastna.Name = "txtLastna";
-            this.txtLastna.Size = new System.Drawing.Size(82, 20);
+            this.txtLastna.Size = new System.Drawing.Size(150, 20);
             this.txtLastna.TabIndex = 20;
             // 
             // dateTimeDOB

@@ -51,7 +51,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDisplayall = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.lblPayment = new System.Windows.Forms.Label();
             this.txtPayment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -261,14 +261,14 @@
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             // 
-            // btnClose
+            // btnLogout
             // 
-            this.btnClose.Location = new System.Drawing.Point(623, 419);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 23;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnLogout.Location = new System.Drawing.Point(623, 419);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 23;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // lblPayment
             // 
@@ -294,7 +294,7 @@
             this.ClientSize = new System.Drawing.Size(720, 454);
             this.Controls.Add(this.txtPayment);
             this.Controls.Add(this.lblPayment);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnDisplayall);
             this.Controls.Add(this.btnBack);
@@ -349,7 +349,7 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnDisplayall;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.TextBox txtPayment;
     }

@@ -39,8 +39,8 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.linklblReg = new System.Windows.Forms.LinkLabel();
             this.lblReg = new System.Windows.Forms.Label();
-            this.rbtnShow = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chbShow = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,23 +152,10 @@
             this.lblReg.TabIndex = 10;
             this.lblReg.Text = "Haven\'t Registered ?";
             // 
-            // rbtnShow
-            // 
-            this.rbtnShow.AutoSize = true;
-            this.rbtnShow.ForeColor = System.Drawing.Color.Black;
-            this.rbtnShow.Location = new System.Drawing.Point(387, 305);
-            this.rbtnShow.Name = "rbtnShow";
-            this.rbtnShow.Size = new System.Drawing.Size(60, 19);
-            this.rbtnShow.TabIndex = 1;
-            this.rbtnShow.TabStop = true;
-            this.rbtnShow.Text = "Show";
-            this.rbtnShow.UseVisualStyleBackColor = true;
-            this.rbtnShow.CheckedChanged += new System.EventHandler(this.rbtnShow_CheckedChanged);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Controls.Add(this.rbtnShow);
+            this.panel1.Controls.Add(this.chbShow);
             this.panel1.Controls.Add(this.lblReg);
             this.panel1.Controls.Add(this.linklblReg);
             this.panel1.Controls.Add(this.txtPassword);
@@ -179,12 +166,22 @@
             this.panel1.Controls.Add(this.pLogo);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.lblLogin);
-            this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(239, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(485, 522);
             this.panel1.TabIndex = 0;
+            // 
+            // chbShow
+            // 
+            this.chbShow.AutoSize = true;
+            this.chbShow.ForeColor = System.Drawing.Color.Black;
+            this.chbShow.Location = new System.Drawing.Point(387, 303);
+            this.chbShow.Name = "chbShow";
+            this.chbShow.Size = new System.Drawing.Size(61, 19);
+            this.chbShow.TabIndex = 1;
+            this.chbShow.Text = "Show";
+            this.chbShow.UseVisualStyleBackColor = true;
             // 
             // FrmLogin
             // 
@@ -218,7 +215,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.LinkLabel linklblReg;
         private System.Windows.Forms.Label lblReg;
-        private System.Windows.Forms.RadioButton rbtnShow;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox chbShow;
     }
 }

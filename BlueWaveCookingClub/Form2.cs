@@ -31,7 +31,7 @@ namespace BlueWaveCookingClub
             if (username.ToLower() == AdminUsername && password == AdminPassword)
             {
                 MessageBox.Show("Admin login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
+
                 // Create a new instance of the login form.
                 FrmAdminPanel AdminPanel = new FrmAdminPanel();
 
@@ -69,16 +69,24 @@ namespace BlueWaveCookingClub
         private void rbtnShow_CheckedChanged(object sender, EventArgs e)
         {
             // Toggle password visibility
-            txtPassword.PasswordChar = rbtnShow.Checked ? '\0' : '*';
+            txtPassword.PasswordChar = chbShow.Checked ? '\0' : '*';
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            // Reset the "Show" button when the password changes
+            chbShow.Checked = false;
         }
 
         private void linklblReg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Click event for the registration link label
-            FrmRegister1 RegistrationForm1 = new FrmRegister1();
+            FrmRegister1 registrationForm1 = new FrmRegister1();
 
-            // Registration Form 1.
-            RegistrationForm1.Show();
+            // Show the Registration Form 1.
+            registrationForm1.Show();
+
         }
     }
+
 }
