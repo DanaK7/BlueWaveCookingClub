@@ -69,7 +69,11 @@ namespace BlueWaveCookingClub
         private void chbShow_CheckedChanged(object sender, EventArgs e)
         {
             // Toggle password visibility
+         
             txtPassword.PasswordChar = chbShow.Checked ? '\0' : '*';
+
+            // Reset the CheckBox after the password is changed
+            chbShow.Checked = false;
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)

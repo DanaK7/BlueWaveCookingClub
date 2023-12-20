@@ -48,9 +48,7 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblPostal = new System.Windows.Forms.Label();
-            this.cbCity = new System.Windows.Forms.ComboBox();
             this.lblCountry = new System.Windows.Forms.Label();
-            this.cbCountry = new System.Windows.Forms.ComboBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblEmergency = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -59,6 +57,8 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.txtPostal = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtCountry = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -218,37 +218,21 @@
             // lblPostal
             // 
             this.lblPostal.AutoSize = true;
-            this.lblPostal.Location = new System.Drawing.Point(507, 358);
+            this.lblPostal.Location = new System.Drawing.Point(536, 358);
             this.lblPostal.Name = "lblPostal";
             this.lblPostal.Size = new System.Drawing.Size(84, 13);
             this.lblPostal.TabIndex = 30;
             this.lblPostal.Text = "Postal/Zip Code";
             // 
-            // cbCity
-            // 
-            this.cbCity.FormattingEnabled = true;
-            this.cbCity.Location = new System.Drawing.Point(403, 374);
-            this.cbCity.Name = "cbCity";
-            this.cbCity.Size = new System.Drawing.Size(92, 21);
-            this.cbCity.TabIndex = 31;
-            // 
             // lblCountry
             // 
             this.lblCountry.AutoSize = true;
-            this.lblCountry.Location = new System.Drawing.Point(633, 358);
+            this.lblCountry.Location = new System.Drawing.Point(702, 358);
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(43, 13);
             this.lblCountry.TabIndex = 34;
             this.lblCountry.Text = "Country";
             this.lblCountry.Click += new System.EventHandler(this.label18_Click);
-            // 
-            // cbCountry
-            // 
-            this.cbCountry.FormattingEnabled = true;
-            this.cbCountry.Location = new System.Drawing.Point(626, 374);
-            this.cbCountry.Name = "cbCountry";
-            this.cbCountry.Size = new System.Drawing.Size(92, 21);
-            this.cbCountry.TabIndex = 36;
             // 
             // lblPhone
             // 
@@ -309,10 +293,24 @@
             // 
             // txtPostal
             // 
-            this.txtPostal.Location = new System.Drawing.Point(510, 375);
+            this.txtPostal.Location = new System.Drawing.Point(539, 375);
             this.txtPostal.Name = "txtPostal";
             this.txtPostal.Size = new System.Drawing.Size(100, 20);
             this.txtPostal.TabIndex = 45;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(403, 375);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(100, 20);
+            this.txtCity.TabIndex = 46;
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(687, 375);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(100, 20);
+            this.txtCountry.TabIndex = 47;
             // 
             // FrmRegister1
             // 
@@ -321,6 +319,8 @@
             this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(860, 566);
+            this.Controls.Add(this.txtCountry);
+            this.Controls.Add(this.txtCity);
             this.Controls.Add(this.txtPostal);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.txtEmail);
@@ -329,9 +329,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblEmergency);
             this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.cbCountry);
             this.Controls.Add(this.lblCountry);
-            this.Controls.Add(this.cbCity);
             this.Controls.Add(this.lblPostal);
             this.Controls.Add(this.lblCity);
             this.Controls.Add(this.txtAddress);
@@ -380,9 +378,7 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblPostal;
-        private System.Windows.Forms.ComboBox cbCity;
         private System.Windows.Forms.Label lblCountry;
-        private System.Windows.Forms.ComboBox cbCountry;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblEmergency;
         private System.Windows.Forms.Label lblEmail;
@@ -391,5 +387,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.TextBox txtPostal;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtCountry;
     }
 }

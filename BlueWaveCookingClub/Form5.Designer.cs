@@ -49,7 +49,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.cbAge = new System.Windows.Forms.ComboBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.cbCooking = new System.Windows.Forms.ComboBox();
@@ -240,14 +240,14 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnClose
+            // btnLogout
             // 
-            this.btnClose.Location = new System.Drawing.Point(665, 545);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 26;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnLogout.Location = new System.Drawing.Point(665, 545);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 26;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // cbAge
             // 
@@ -337,7 +337,7 @@
             this.Controls.Add(this.cbCooking);
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.cbAge);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSearch);
@@ -391,7 +391,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ComboBox cbAge;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.ComboBox cbCooking;
