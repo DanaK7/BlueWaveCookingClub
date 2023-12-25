@@ -38,8 +38,6 @@
             this.checkIntermediate = new System.Windows.Forms.CheckBox();
             this.checkAdvance = new System.Windows.Forms.CheckBox();
             this.rdbtnCuisine = new System.Windows.Forms.RadioButton();
-            this.rdbtnBeverage = new System.Windows.Forms.RadioButton();
-            this.rdbtnDietary = new System.Windows.Forms.RadioButton();
             this.rdbtnDessert = new System.Windows.Forms.RadioButton();
             this.rdbtnBakery = new System.Windows.Forms.RadioButton();
             this.cbSubscription = new System.Windows.Forms.ComboBox();
@@ -53,7 +51,7 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblPayment = new System.Windows.Forms.Label();
-            this.txtPayment = new System.Windows.Forms.TextBox();
+            this.cbPayment = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,9 +95,9 @@
             this.lblSubscrption.AutoSize = true;
             this.lblSubscrption.Location = new System.Drawing.Point(343, 127);
             this.lblSubscrption.Name = "lblSubscrption";
-            this.lblSubscrption.Size = new System.Drawing.Size(70, 13);
+            this.lblSubscrption.Size = new System.Drawing.Size(65, 13);
             this.lblSubscrption.TabIndex = 4;
-            this.lblSubscrption.Text = "Subscriptions";
+            this.lblSubscrption.Text = "Subscription";
             // 
             // checkBeginner
             // 
@@ -142,28 +140,6 @@
             this.rdbtnCuisine.Text = "Cuisine";
             this.rdbtnCuisine.UseVisualStyleBackColor = true;
             // 
-            // rdbtnBeverage
-            // 
-            this.rdbtnBeverage.AutoSize = true;
-            this.rdbtnBeverage.Location = new System.Drawing.Point(537, 78);
-            this.rdbtnBeverage.Name = "rdbtnBeverage";
-            this.rdbtnBeverage.Size = new System.Drawing.Size(71, 17);
-            this.rdbtnBeverage.TabIndex = 10;
-            this.rdbtnBeverage.TabStop = true;
-            this.rdbtnBeverage.Text = "Beverage";
-            this.rdbtnBeverage.UseVisualStyleBackColor = true;
-            // 
-            // rdbtnDietary
-            // 
-            this.rdbtnDietary.AutoSize = true;
-            this.rdbtnDietary.Location = new System.Drawing.Point(451, 78);
-            this.rdbtnDietary.Name = "rdbtnDietary";
-            this.rdbtnDietary.Size = new System.Drawing.Size(58, 17);
-            this.rdbtnDietary.TabIndex = 11;
-            this.rdbtnDietary.TabStop = true;
-            this.rdbtnDietary.Text = "Dietary";
-            this.rdbtnDietary.UseVisualStyleBackColor = true;
-            // 
             // rdbtnDessert
             // 
             this.rdbtnDessert.AutoSize = true;
@@ -188,18 +164,27 @@
             // 
             // cbSubscription
             // 
+            this.cbSubscription.AutoCompleteCustomSource.AddRange(new string[] {
+            "Basic ",
+            "Premium ",
+            "VIP"});
             this.cbSubscription.FormattingEnabled = true;
             this.cbSubscription.Location = new System.Drawing.Point(451, 119);
             this.cbSubscription.Name = "cbSubscription";
-            this.cbSubscription.Size = new System.Drawing.Size(121, 21);
+            this.cbSubscription.Size = new System.Drawing.Size(170, 21);
             this.cbSubscription.TabIndex = 14;
             // 
             // cbPayM
             // 
+            this.cbPayM.AutoCompleteCustomSource.AddRange(new string[] {
+            "Credit/Debit Cards",
+            "Paypal",
+            "Stripe",
+            "Bank Transfers"});
             this.cbPayM.FormattingEnabled = true;
             this.cbPayM.Location = new System.Drawing.Point(451, 163);
             this.cbPayM.Name = "cbPayM";
-            this.cbPayM.Size = new System.Drawing.Size(121, 21);
+            this.cbPayM.Size = new System.Drawing.Size(170, 21);
             this.cbPayM.TabIndex = 15;
             // 
             // lblRegno
@@ -279,12 +264,17 @@
             this.lblPayment.TabIndex = 24;
             this.lblPayment.Text = "Payment";
             // 
-            // txtPayment
+            // cbPayment
             // 
-            this.txtPayment.Location = new System.Drawing.Point(451, 205);
-            this.txtPayment.Name = "txtPayment";
-            this.txtPayment.Size = new System.Drawing.Size(121, 20);
-            this.txtPayment.TabIndex = 25;
+            this.cbPayment.AutoCompleteCustomSource.AddRange(new string[] {
+            "$9.99 Monthly (Basic)",
+            "$14.99 Monthly (Premium)",
+            "$19.99 Monthly (VIP)"});
+            this.cbPayment.FormattingEnabled = true;
+            this.cbPayment.Location = new System.Drawing.Point(451, 208);
+            this.cbPayment.Name = "cbPayment";
+            this.cbPayment.Size = new System.Drawing.Size(170, 21);
+            this.cbPayment.TabIndex = 25;
             // 
             // FrmRegister2
             // 
@@ -292,7 +282,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(720, 454);
-            this.Controls.Add(this.txtPayment);
+            this.Controls.Add(this.cbPayment);
             this.Controls.Add(this.lblPayment);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnSubmit);
@@ -306,8 +296,6 @@
             this.Controls.Add(this.cbSubscription);
             this.Controls.Add(this.rdbtnBakery);
             this.Controls.Add(this.rdbtnDessert);
-            this.Controls.Add(this.rdbtnDietary);
-            this.Controls.Add(this.rdbtnBeverage);
             this.Controls.Add(this.rdbtnCuisine);
             this.Controls.Add(this.checkAdvance);
             this.Controls.Add(this.checkIntermediate);
@@ -336,8 +324,6 @@
         private System.Windows.Forms.CheckBox checkIntermediate;
         private System.Windows.Forms.CheckBox checkAdvance;
         private System.Windows.Forms.RadioButton rdbtnCuisine;
-        private System.Windows.Forms.RadioButton rdbtnBeverage;
-        private System.Windows.Forms.RadioButton rdbtnDietary;
         private System.Windows.Forms.RadioButton rdbtnDessert;
         private System.Windows.Forms.RadioButton rdbtnBakery;
         private System.Windows.Forms.ComboBox cbSubscription;
@@ -351,6 +337,6 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblPayment;
-        private System.Windows.Forms.TextBox txtPayment;
+        private System.Windows.Forms.ComboBox cbPayment;
     }
 }

@@ -48,17 +48,15 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblPostal = new System.Windows.Forms.Label();
-            this.lblCountry = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.lblEmergency = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.txtPostal = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
-            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.lblNIC = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -163,7 +161,19 @@
             // 
             // cbSuffix
             // 
+            this.cbSuffix.AutoCompleteCustomSource.AddRange(new string[] {
+            "Mr",
+            "Ms",
+            "Mrs",
+            "Dr",
+            "Rev"});
             this.cbSuffix.FormattingEnabled = true;
+            this.cbSuffix.Items.AddRange(new object[] {
+            "Mr",
+            "Ms",
+            "Mrs",
+            "Dr",
+            "Rev"});
             this.cbSuffix.Location = new System.Drawing.Point(414, 92);
             this.cbSuffix.Name = "cbSuffix";
             this.cbSuffix.Size = new System.Drawing.Size(92, 21);
@@ -185,7 +195,15 @@
             // 
             // cbGender
             // 
+            this.cbGender.AutoCompleteCustomSource.AddRange(new string[] {
+            "Male",
+            "Female",
+            "Other"});
             this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
             this.cbGender.Location = new System.Drawing.Point(411, 253);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(92, 21);
@@ -193,7 +211,18 @@
             // 
             // cbAge
             // 
+            this.cbAge.AutoCompleteCustomSource.AddRange(new string[] {
+            "05-10 years",
+            "10-20 years",
+            "20-10 years",
+            "30-40 years",
+            "40-50 years"});
             this.cbAge.FormattingEnabled = true;
+            this.cbAge.Items.AddRange(new object[] {
+            "10-20",
+            "20-30",
+            "30-40",
+            "40-50"});
             this.cbAge.Location = new System.Drawing.Point(519, 253);
             this.cbAge.Name = "cbAge";
             this.cbAge.Size = new System.Drawing.Size(92, 21);
@@ -224,16 +253,6 @@
             this.lblPostal.TabIndex = 30;
             this.lblPostal.Text = "Postal/Zip Code";
             // 
-            // lblCountry
-            // 
-            this.lblCountry.AutoSize = true;
-            this.lblCountry.Location = new System.Drawing.Point(702, 358);
-            this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(43, 13);
-            this.lblCountry.TabIndex = 34;
-            this.lblCountry.Text = "Country";
-            this.lblCountry.Click += new System.EventHandler(this.label18_Click);
-            // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
@@ -243,19 +262,10 @@
             this.lblPhone.TabIndex = 37;
             this.lblPhone.Text = "Phone Number";
             // 
-            // lblEmergency
-            // 
-            this.lblEmergency.AutoSize = true;
-            this.lblEmergency.Location = new System.Drawing.Point(641, 416);
-            this.lblEmergency.Name = "lblEmergency";
-            this.lblEmergency.Size = new System.Drawing.Size(100, 13);
-            this.lblEmergency.TabIndex = 38;
-            this.lblEmergency.Text = "Emergency Contact";
-            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(407, 474);
+            this.lblEmail.Location = new System.Drawing.Point(639, 416);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(73, 13);
             this.lblEmail.TabIndex = 39;
@@ -268,16 +278,9 @@
             this.txtPhone.Size = new System.Drawing.Size(204, 20);
             this.txtPhone.TabIndex = 40;
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(636, 432);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(187, 20);
-            this.textBox7.TabIndex = 41;
-            // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(406, 505);
+            this.txtEmail.Location = new System.Drawing.Point(633, 432);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(204, 20);
             this.txtEmail.TabIndex = 42;
@@ -305,12 +308,21 @@
             this.txtCity.Size = new System.Drawing.Size(100, 20);
             this.txtCity.TabIndex = 46;
             // 
-            // txtCountry
+            // lblNIC
             // 
-            this.txtCountry.Location = new System.Drawing.Point(687, 375);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(100, 20);
-            this.txtCountry.TabIndex = 47;
+            this.lblNIC.AutoSize = true;
+            this.lblNIC.Location = new System.Drawing.Point(630, 237);
+            this.lblNIC.Name = "lblNIC";
+            this.lblNIC.Size = new System.Drawing.Size(65, 13);
+            this.lblNIC.TabIndex = 47;
+            this.lblNIC.Text = "NIC Number";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(633, 254);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(150, 20);
+            this.textBox1.TabIndex = 48;
             // 
             // FrmRegister1
             // 
@@ -319,17 +331,15 @@
             this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(860, 566);
-            this.Controls.Add(this.txtCountry);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblNIC);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.txtPostal);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblEmergency);
             this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.lblCountry);
             this.Controls.Add(this.lblPostal);
             this.Controls.Add(this.lblCity);
             this.Controls.Add(this.txtAddress);
@@ -378,16 +388,14 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblPostal;
-        private System.Windows.Forms.Label lblCountry;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.Label lblEmergency;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.TextBox txtPostal;
         private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.Label lblNIC;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

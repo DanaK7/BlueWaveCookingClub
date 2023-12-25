@@ -69,27 +69,23 @@ namespace BlueWaveCookingClub
         private void chbShow_CheckedChanged(object sender, EventArgs e)
         {
             // Toggle password visibility
+            if (chbShow.Checked)
 
-            txtPassword.PasswordChar = chbShow.Checked ? '\0' : '*';
+            {
+                // Show the password
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
 
-            // Reset the CheckBox after the password is changed
-            chbShow.Checked = false;
-        }
+            {
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            // Reset the "Show" button when the password changes
-            chbShow.Checked = false;
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            // Reset the "Show" button
-            chbShow.Checked = false;
-
-
+                // Hide the password
+                txtPassword.UseSystemPasswordChar = true;
+            }
 
         }
+
+       
         private void linklblReg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             {
                 // Click event for the registration link label
