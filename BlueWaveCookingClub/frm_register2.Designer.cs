@@ -68,9 +68,9 @@
             this.lblCookExp.AutoSize = true;
             this.lblCookExp.Location = new System.Drawing.Point(343, 23);
             this.lblCookExp.Name = "lblCookExp";
-            this.lblCookExp.Size = new System.Drawing.Size(102, 13);
+            this.lblCookExp.Size = new System.Drawing.Size(12, 13);
             this.lblCookExp.TabIndex = 1;
-            this.lblCookExp.Text = "Cooking Experience";
+            this.lblCookExp.Text = "s";
             // 
             // lblCookClubs
             // 

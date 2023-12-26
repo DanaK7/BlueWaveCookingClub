@@ -57,8 +57,8 @@
             this.cbPayment = new System.Windows.Forms.ComboBox();
             this.lblRegno = new System.Windows.Forms.Label();
             this.txtRegno = new System.Windows.Forms.TextBox();
-            this.lblSuffix = new System.Windows.Forms.Label();
-            this.cbSuffix = new System.Windows.Forms.ComboBox();
+            this.lblCookExp = new System.Windows.Forms.Label();
+            this.cbExperience = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +74,7 @@
             // lblLastna
             // 
             this.lblLastna.AutoSize = true;
-            this.lblLastna.Location = new System.Drawing.Point(454, 74);
+            this.lblLastna.Location = new System.Drawing.Point(447, 23);
             this.lblLastna.Name = "lblLastna";
             this.lblLastna.Size = new System.Drawing.Size(58, 13);
             this.lblLastna.TabIndex = 1;
@@ -92,7 +92,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(450, 114);
+            this.lblEmail.Location = new System.Drawing.Point(450, 67);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(73, 13);
             this.lblEmail.TabIndex = 3;
@@ -110,7 +110,7 @@
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(463, 163);
+            this.lblGender.Location = new System.Drawing.Point(463, 114);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(42, 13);
             this.lblGender.TabIndex = 5;
@@ -128,7 +128,7 @@
             // lblCookClubs
             // 
             this.lblCookClubs.AutoSize = true;
-            this.lblCookClubs.Location = new System.Drawing.Point(463, 249);
+            this.lblCookClubs.Location = new System.Drawing.Point(453, 208);
             this.lblCookClubs.Name = "lblCookClubs";
             this.lblCookClubs.Size = new System.Drawing.Size(70, 13);
             this.lblCookClubs.TabIndex = 8;
@@ -137,7 +137,7 @@
             // lblSubscrption
             // 
             this.lblSubscrption.AutoSize = true;
-            this.lblSubscrption.Location = new System.Drawing.Point(463, 208);
+            this.lblSubscrption.Location = new System.Drawing.Point(463, 163);
             this.lblSubscrption.Name = "lblSubscrption";
             this.lblSubscrption.Size = new System.Drawing.Size(60, 13);
             this.lblSubscrption.TabIndex = 9;
@@ -152,7 +152,7 @@
             // 
             // txtLastna
             // 
-            this.txtLastna.Location = new System.Drawing.Point(539, 67);
+            this.txtLastna.Location = new System.Drawing.Point(539, 23);
             this.txtLastna.Name = "txtLastna";
             this.txtLastna.Size = new System.Drawing.Size(157, 20);
             this.txtLastna.TabIndex = 11;
@@ -166,7 +166,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(539, 107);
+            this.txtEmail.Location = new System.Drawing.Point(539, 60);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(157, 20);
             this.txtEmail.TabIndex = 13;
@@ -194,6 +194,7 @@
             this.btnInsert.TabIndex = 21;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnUpdate
             // 
@@ -261,7 +262,7 @@
             "Female",
             "Other"});
             this.cbGender.FormattingEnabled = true;
-            this.cbGender.Location = new System.Drawing.Point(539, 155);
+            this.cbGender.Location = new System.Drawing.Point(539, 111);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(157, 21);
             this.cbGender.TabIndex = 28;
@@ -273,7 +274,7 @@
             "Bakery",
             "Dessert"});
             this.cbCooking.FormattingEnabled = true;
-            this.cbCooking.Location = new System.Drawing.Point(539, 241);
+            this.cbCooking.Location = new System.Drawing.Point(539, 200);
             this.cbCooking.Name = "cbCooking";
             this.cbCooking.Size = new System.Drawing.Size(157, 21);
             this.cbCooking.TabIndex = 29;
@@ -285,7 +286,7 @@
             "Premium ",
             "VIP"});
             this.cbSubscription.FormattingEnabled = true;
-            this.cbSubscription.Location = new System.Drawing.Point(539, 200);
+            this.cbSubscription.Location = new System.Drawing.Point(539, 155);
             this.cbSubscription.Name = "cbSubscription";
             this.cbSubscription.Size = new System.Drawing.Size(157, 21);
             this.cbSubscription.TabIndex = 30;
@@ -327,32 +328,26 @@
             this.txtRegno.Size = new System.Drawing.Size(175, 20);
             this.txtRegno.TabIndex = 35;
             // 
-            // lblSuffix
+            // lblCookExp
             // 
-            this.lblSuffix.AutoSize = true;
-            this.lblSuffix.Location = new System.Drawing.Point(463, 27);
-            this.lblSuffix.Name = "lblSuffix";
-            this.lblSuffix.Size = new System.Drawing.Size(33, 13);
-            this.lblSuffix.TabIndex = 36;
-            this.lblSuffix.Text = "Suffix";
+            this.lblCookExp.AutoSize = true;
+            this.lblCookExp.Location = new System.Drawing.Point(431, 246);
+            this.lblCookExp.Name = "lblCookExp";
+            this.lblCookExp.Size = new System.Drawing.Size(102, 13);
+            this.lblCookExp.TabIndex = 36;
+            this.lblCookExp.Text = "Cooking Experience";
             // 
-            // cbSuffix
+            // cbExperience
             // 
-            this.cbSuffix.AutoCompleteCustomSource.AddRange(new string[] {
-            "Basic ",
-            "Premium ",
-            "VIP"});
-            this.cbSuffix.FormattingEnabled = true;
-            this.cbSuffix.Items.AddRange(new object[] {
-            "Mr",
-            "Ms",
-            "Mrs",
-            "Dr",
-            "Rev"});
-            this.cbSuffix.Location = new System.Drawing.Point(539, 23);
-            this.cbSuffix.Name = "cbSuffix";
-            this.cbSuffix.Size = new System.Drawing.Size(148, 21);
-            this.cbSuffix.TabIndex = 37;
+            this.cbExperience.AutoCompleteCustomSource.AddRange(new string[] {
+            "Beginner",
+            "Intermediate",
+            "Advance"});
+            this.cbExperience.FormattingEnabled = true;
+            this.cbExperience.Location = new System.Drawing.Point(539, 243);
+            this.cbExperience.Name = "cbExperience";
+            this.cbExperience.Size = new System.Drawing.Size(157, 21);
+            this.cbExperience.TabIndex = 37;
             // 
             // FrmAdminPanel
             // 
@@ -360,8 +355,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(800, 580);
-            this.Controls.Add(this.cbSuffix);
-            this.Controls.Add(this.lblSuffix);
+            this.Controls.Add(this.cbExperience);
+            this.Controls.Add(this.lblCookExp);
             this.Controls.Add(this.txtRegno);
             this.Controls.Add(this.lblRegno);
             this.Controls.Add(this.cbPayment);
@@ -431,7 +426,7 @@
         private System.Windows.Forms.ComboBox cbPayment;
         private System.Windows.Forms.Label lblRegno;
         private System.Windows.Forms.TextBox txtRegno;
-        private System.Windows.Forms.Label lblSuffix;
-        private System.Windows.Forms.ComboBox cbSuffix;
+        private System.Windows.Forms.Label lblCookExp;
+        private System.Windows.Forms.ComboBox cbExperience;
     }
 }

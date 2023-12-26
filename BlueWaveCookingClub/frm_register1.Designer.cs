@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMemberreg1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblSuffix = new System.Windows.Forms.Label();
             this.lblLastna = new System.Windows.Forms.Label();
             this.lblFirstna = new System.Windows.Forms.Label();
             this.lblDOB = new System.Windows.Forms.Label();
@@ -40,20 +39,17 @@
             this.lblAge = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.txtFirstna = new System.Windows.Forms.TextBox();
-            this.cbSuffix = new System.Windows.Forms.ComboBox();
             this.txtLastna = new System.Windows.Forms.TextBox();
             this.dateTimeDOB = new System.Windows.Forms.DateTimePicker();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.cbAge = new System.Windows.Forms.ComboBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblCity = new System.Windows.Forms.Label();
-            this.lblPostal = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
-            this.txtPostal = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.lblNIC = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -89,19 +85,10 @@
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name";
             // 
-            // lblSuffix
-            // 
-            this.lblSuffix.AutoSize = true;
-            this.lblSuffix.Location = new System.Drawing.Point(417, 116);
-            this.lblSuffix.Name = "lblSuffix";
-            this.lblSuffix.Size = new System.Drawing.Size(33, 13);
-            this.lblSuffix.TabIndex = 3;
-            this.lblSuffix.Text = "Suffix";
-            // 
             // lblLastna
             // 
             this.lblLastna.AutoSize = true;
-            this.lblLastna.Location = new System.Drawing.Point(702, 116);
+            this.lblLastna.Location = new System.Drawing.Point(639, 115);
             this.lblLastna.Name = "lblLastna";
             this.lblLastna.Size = new System.Drawing.Size(27, 13);
             this.lblLastna.TabIndex = 4;
@@ -110,7 +97,7 @@
             // lblFirstna
             // 
             this.lblFirstna.AutoSize = true;
-            this.lblFirstna.Location = new System.Drawing.Point(523, 116);
+            this.lblFirstna.Location = new System.Drawing.Point(411, 115);
             this.lblFirstna.Name = "lblFirstna";
             this.lblFirstna.Size = new System.Drawing.Size(26, 13);
             this.lblFirstna.TabIndex = 5;
@@ -154,36 +141,16 @@
             // 
             // txtFirstna
             // 
-            this.txtFirstna.Location = new System.Drawing.Point(526, 93);
+            this.txtFirstna.Location = new System.Drawing.Point(414, 92);
             this.txtFirstna.Name = "txtFirstna";
-            this.txtFirstna.Size = new System.Drawing.Size(150, 20);
+            this.txtFirstna.Size = new System.Drawing.Size(172, 20);
             this.txtFirstna.TabIndex = 16;
-            // 
-            // cbSuffix
-            // 
-            this.cbSuffix.AutoCompleteCustomSource.AddRange(new string[] {
-            "Mr",
-            "Ms",
-            "Mrs",
-            "Dr",
-            "Rev"});
-            this.cbSuffix.FormattingEnabled = true;
-            this.cbSuffix.Items.AddRange(new object[] {
-            "Mr",
-            "Ms",
-            "Mrs",
-            "Dr",
-            "Rev"});
-            this.cbSuffix.Location = new System.Drawing.Point(414, 92);
-            this.cbSuffix.Name = "cbSuffix";
-            this.cbSuffix.Size = new System.Drawing.Size(92, 21);
-            this.cbSuffix.TabIndex = 19;
             // 
             // txtLastna
             // 
-            this.txtLastna.Location = new System.Drawing.Point(698, 92);
+            this.txtLastna.Location = new System.Drawing.Point(642, 92);
             this.txtLastna.Name = "txtLastna";
-            this.txtLastna.Size = new System.Drawing.Size(150, 20);
+            this.txtLastna.Size = new System.Drawing.Size(156, 20);
             this.txtLastna.TabIndex = 20;
             // 
             // dateTimeDOB
@@ -232,31 +199,22 @@
             // 
             this.txtAddress.Location = new System.Drawing.Point(411, 315);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(292, 20);
+            this.txtAddress.Size = new System.Drawing.Size(237, 20);
             this.txtAddress.TabIndex = 26;
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(411, 358);
+            this.lblCity.Location = new System.Drawing.Point(671, 299);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(24, 13);
             this.lblCity.TabIndex = 28;
             this.lblCity.Text = "City";
             // 
-            // lblPostal
-            // 
-            this.lblPostal.AutoSize = true;
-            this.lblPostal.Location = new System.Drawing.Point(536, 358);
-            this.lblPostal.Name = "lblPostal";
-            this.lblPostal.Size = new System.Drawing.Size(84, 13);
-            this.lblPostal.TabIndex = 30;
-            this.lblPostal.Text = "Postal/Zip Code";
-            // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(407, 416);
+            this.lblPhone.Location = new System.Drawing.Point(407, 365);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(78, 13);
             this.lblPhone.TabIndex = 37;
@@ -265,7 +223,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(639, 416);
+            this.lblEmail.Location = new System.Drawing.Point(404, 421);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(73, 13);
             this.lblEmail.TabIndex = 39;
@@ -273,14 +231,14 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(406, 432);
+            this.txtPhone.Location = new System.Drawing.Point(407, 381);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(204, 20);
             this.txtPhone.TabIndex = 40;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(633, 432);
+            this.txtEmail.Location = new System.Drawing.Point(407, 437);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(204, 20);
             this.txtEmail.TabIndex = 42;
@@ -293,17 +251,11 @@
             this.btnNext.TabIndex = 44;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
-            // 
-            // txtPostal
-            // 
-            this.txtPostal.Location = new System.Drawing.Point(539, 375);
-            this.txtPostal.Name = "txtPostal";
-            this.txtPostal.Size = new System.Drawing.Size(100, 20);
-            this.txtPostal.TabIndex = 45;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(403, 375);
+            this.txtCity.Location = new System.Drawing.Point(674, 315);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(100, 20);
             this.txtCity.TabIndex = 46;
@@ -334,20 +286,17 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblNIC);
             this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.txtPostal);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.lblPostal);
             this.Controls.Add(this.lblCity);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.cbAge);
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.dateTimeDOB);
             this.Controls.Add(this.txtLastna);
-            this.Controls.Add(this.cbSuffix);
             this.Controls.Add(this.txtFirstna);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblAge);
@@ -355,7 +304,6 @@
             this.Controls.Add(this.lblDOB);
             this.Controls.Add(this.lblFirstna);
             this.Controls.Add(this.lblLastna);
-            this.Controls.Add(this.lblSuffix);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblMemberreg1);
             this.Controls.Add(this.panel1);
@@ -372,7 +320,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMemberreg1;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblSuffix;
         private System.Windows.Forms.Label lblLastna;
         private System.Windows.Forms.Label lblFirstna;
         private System.Windows.Forms.Label lblDOB;
@@ -380,20 +327,17 @@
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtFirstna;
-        private System.Windows.Forms.ComboBox cbSuffix;
         private System.Windows.Forms.TextBox txtLastna;
         private System.Windows.Forms.DateTimePicker dateTimeDOB;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.ComboBox cbAge;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblCity;
-        private System.Windows.Forms.Label lblPostal;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.TextBox txtPostal;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label lblNIC;
         private System.Windows.Forms.TextBox textBox1;
