@@ -21,15 +21,77 @@ namespace BlueWaveCookingClub
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False");
-            con.Open();
+            /*
+            try
+            {
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False");
+               
+                con.Open();
 
-            string sqlquery = "INSERT INTO tbl_BlueWave VALUES('"+ txtLastna .Text+ "')";
+                string sqlquery = "INSERT INTO tbl_BlueWave VALUES('" + txtFirstna.Text + "','" + txtLastna.Text + "','" + txtEmail.Text + "','" + txtAddress.Text + "','" + cbGender.Text + "','" + txtPhone.Text + "','" + cbSubscription.Text + "','" + cbAge.Text + "','" + cbCooking.Text + "','" + cbPayment.Text + "', '" + cbExperience.Text + "')";
 
-            SqlCommand com = new SqlCommand(sqlquery, con);
-            com.ExecuteNonQuery();
-            MessageBox.Show("dsfsdfsdcv");
+                SqlCommand com = new SqlCommand(sqlquery, con);
+                com.ExecuteNonQuery();
+                MessageBox.Show("dsfsdfsdcv");
+            }
+            catch(SqlException ex)
+            {
+               MessageBox.Show("Error: " + ex.Message);
+            }
+            
+            
+            
+            
+            }*/
+
+
+            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True"))
+            {
+                try
+                {
+                    con.Open();
+                    string sqlquery = "INSERT INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @City, @Phone_Number, @Email, @NIC_Number, @Cooking_Experience, @Cooking_Clubs, @Subscription, @Payment_Method, @Payment, @Date_of_Reg)";
+                    using (SqlCommand com = new SqlCommand(sqlquery, con))
+                    {
+                        com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
+                        com.Parameters.AddWithValue("@Last_Name", txtLastna.Text);
+                        com.Parameters.AddWithValue("@Date_Of_Birth", dateOfBirth.Text);
+                        com.Parameters.AddWithValue("@Gender", cbGender.Text);
+                        com.Parameters.AddWithValue("@Age", cbAge.Text);
+                        com.Parameters.AddWithValue("@Address", txtAddress.Text);
+                        com.Parameters.AddWithValue("@City", txtCity.Text);
+                        com.Parameters.AddWithValue("@Phone_Number", txtPhone.Text);
+                        com.Parameters.AddWithValue("@Email", txtEmail.Text);
+                        com.Parameters.AddWithValue("@NIC_Number", txtNIC.Text);
+                        com.Parameters.AddWithValue("@Cooking_Experience", cbExperience.Text);
+                        com.Parameters.AddWithValue("@Cooking_Clubs", cbCooking.Text);
+                        com.Parameters.AddWithValue("@Subscription", cbSubscription.Text);
+                        com.Parameters.AddWithValue("@Payment_Method", cbPayM.Text);
+                        com.Parameters.AddWithValue("@Payment", cbPayment.Text);
+                        com.Parameters.AddWithValue("@Date_of_Reg", dateOfReg.Text);
+
+
+
+
+
+
+
+
+
+
+
+
+                        com.ExecuteNonQuery();
+                        MessageBox.Show("Data inserted successfully!");
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
 
         }
     }
+
 }

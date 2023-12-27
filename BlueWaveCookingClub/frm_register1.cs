@@ -31,11 +31,11 @@ namespace BlueWaveCookingClub
         {
             {
                 // Create a new instance for registration form 2
-                FrmRegister2 Registration2 = new FrmRegister2();
+                FrmRegister2 registrationForm2 = new FrmRegister2();
 
 
                 // Show the registration form 2
-                Registration2.Show();
+                registrationForm2.Show();
 
                 //Hide the current form (register form 1)
                 this.Hide();

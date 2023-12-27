@@ -40,7 +40,7 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.txtFirstna = new System.Windows.Forms.TextBox();
             this.txtLastna = new System.Windows.Forms.TextBox();
-            this.dateTimeDOB = new System.Windows.Forms.DateTimePicker();
+            this.dateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.cbAge = new System.Windows.Forms.ComboBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.lblNIC = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNIC = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -153,12 +153,12 @@
             this.txtLastna.Size = new System.Drawing.Size(156, 20);
             this.txtLastna.TabIndex = 20;
             // 
-            // dateTimeDOB
+            // dateOfBirth
             // 
-            this.dateTimeDOB.Location = new System.Drawing.Point(414, 191);
-            this.dateTimeDOB.Name = "dateTimeDOB";
-            this.dateTimeDOB.Size = new System.Drawing.Size(200, 20);
-            this.dateTimeDOB.TabIndex = 21;
+            this.dateOfBirth.Location = new System.Drawing.Point(414, 191);
+            this.dateOfBirth.Name = "dateOfBirth";
+            this.dateOfBirth.Size = new System.Drawing.Size(200, 20);
+            this.dateOfBirth.TabIndex = 21;
             // 
             // cbGender
             // 
@@ -186,10 +186,11 @@
             "40-50 years"});
             this.cbAge.FormattingEnabled = true;
             this.cbAge.Items.AddRange(new object[] {
-            "10-20",
-            "20-30",
-            "30-40",
-            "40-50"});
+            "10-15 years",
+            "15-20 years",
+            "20-30 years",
+            "30-40 years",
+            "40-50 years"});
             this.cbAge.Location = new System.Drawing.Point(519, 253);
             this.cbAge.Name = "cbAge";
             this.cbAge.Size = new System.Drawing.Size(92, 21);
@@ -269,12 +270,12 @@
             this.lblNIC.TabIndex = 47;
             this.lblNIC.Text = "NIC Number";
             // 
-            // textBox1
+            // txtNIC
             // 
-            this.textBox1.Location = new System.Drawing.Point(633, 254);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 48;
+            this.txtNIC.Location = new System.Drawing.Point(633, 254);
+            this.txtNIC.Name = "txtNIC";
+            this.txtNIC.Size = new System.Drawing.Size(150, 20);
+            this.txtNIC.TabIndex = 48;
             // 
             // FrmRegister1
             // 
@@ -283,7 +284,7 @@
             this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(860, 566);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNIC);
             this.Controls.Add(this.lblNIC);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.btnNext);
@@ -295,7 +296,7 @@
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.cbAge);
             this.Controls.Add(this.cbGender);
-            this.Controls.Add(this.dateTimeDOB);
+            this.Controls.Add(this.dateOfBirth);
             this.Controls.Add(this.txtLastna);
             this.Controls.Add(this.txtFirstna);
             this.Controls.Add(this.lblAddress);
@@ -328,7 +329,7 @@
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtFirstna;
         private System.Windows.Forms.TextBox txtLastna;
-        private System.Windows.Forms.DateTimePicker dateTimeDOB;
+        private System.Windows.Forms.DateTimePicker dateOfBirth;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.ComboBox cbAge;
         private System.Windows.Forms.TextBox txtAddress;
@@ -340,6 +341,6 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label lblNIC;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNIC;
     }
 }

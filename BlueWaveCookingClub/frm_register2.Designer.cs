@@ -34,24 +34,20 @@
             this.lblCookClubs = new System.Windows.Forms.Label();
             this.lblPayM = new System.Windows.Forms.Label();
             this.lblSubscrption = new System.Windows.Forms.Label();
-            this.checkBeginner = new System.Windows.Forms.CheckBox();
-            this.checkIntermediate = new System.Windows.Forms.CheckBox();
-            this.checkAdvance = new System.Windows.Forms.CheckBox();
-            this.rdbtnCuisine = new System.Windows.Forms.RadioButton();
-            this.rdbtnDessert = new System.Windows.Forms.RadioButton();
-            this.rdbtnBakery = new System.Windows.Forms.RadioButton();
             this.cbSubscription = new System.Windows.Forms.ComboBox();
             this.cbPayM = new System.Windows.Forms.ComboBox();
             this.lblRegno = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
+            this.lblDateReg = new System.Windows.Forms.Label();
             this.txtRegno = new System.Windows.Forms.TextBox();
-            this.dateTime = new System.Windows.Forms.DateTimePicker();
+            this.dateOfReg = new System.Windows.Forms.DateTimePicker();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDisplayall = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblPayment = new System.Windows.Forms.Label();
             this.cbPayment = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCooking = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,16 +62,16 @@
             // lblCookExp
             // 
             this.lblCookExp.AutoSize = true;
-            this.lblCookExp.Location = new System.Drawing.Point(343, 23);
+            this.lblCookExp.Location = new System.Drawing.Point(343, 22);
             this.lblCookExp.Name = "lblCookExp";
-            this.lblCookExp.Size = new System.Drawing.Size(12, 13);
+            this.lblCookExp.Size = new System.Drawing.Size(102, 13);
             this.lblCookExp.TabIndex = 1;
-            this.lblCookExp.Text = "s";
+            this.lblCookExp.Text = "Cooking Experience";
             // 
             // lblCookClubs
             // 
             this.lblCookClubs.AutoSize = true;
-            this.lblCookClubs.Location = new System.Drawing.Point(343, 59);
+            this.lblCookClubs.Location = new System.Drawing.Point(348, 68);
             this.lblCookClubs.Name = "lblCookClubs";
             this.lblCookClubs.Size = new System.Drawing.Size(75, 13);
             this.lblCookClubs.TabIndex = 2;
@@ -84,7 +80,7 @@
             // lblPayM
             // 
             this.lblPayM.AutoSize = true;
-            this.lblPayM.Location = new System.Drawing.Point(343, 163);
+            this.lblPayM.Location = new System.Drawing.Point(348, 150);
             this.lblPayM.Name = "lblPayM";
             this.lblPayM.Size = new System.Drawing.Size(87, 13);
             this.lblPayM.TabIndex = 3;
@@ -93,74 +89,11 @@
             // lblSubscrption
             // 
             this.lblSubscrption.AutoSize = true;
-            this.lblSubscrption.Location = new System.Drawing.Point(343, 127);
+            this.lblSubscrption.Location = new System.Drawing.Point(348, 110);
             this.lblSubscrption.Name = "lblSubscrption";
             this.lblSubscrption.Size = new System.Drawing.Size(65, 13);
             this.lblSubscrption.TabIndex = 4;
             this.lblSubscrption.Text = "Subscription";
-            // 
-            // checkBeginner
-            // 
-            this.checkBeginner.AutoSize = true;
-            this.checkBeginner.Location = new System.Drawing.Point(451, 23);
-            this.checkBeginner.Name = "checkBeginner";
-            this.checkBeginner.Size = new System.Drawing.Size(68, 17);
-            this.checkBeginner.TabIndex = 6;
-            this.checkBeginner.Text = "Beginner";
-            this.checkBeginner.UseVisualStyleBackColor = true;
-            // 
-            // checkIntermediate
-            // 
-            this.checkIntermediate.AutoSize = true;
-            this.checkIntermediate.Location = new System.Drawing.Point(537, 23);
-            this.checkIntermediate.Name = "checkIntermediate";
-            this.checkIntermediate.Size = new System.Drawing.Size(84, 17);
-            this.checkIntermediate.TabIndex = 7;
-            this.checkIntermediate.Text = "Intermediate";
-            this.checkIntermediate.UseVisualStyleBackColor = true;
-            // 
-            // checkAdvance
-            // 
-            this.checkAdvance.AutoSize = true;
-            this.checkAdvance.Location = new System.Drawing.Point(623, 22);
-            this.checkAdvance.Name = "checkAdvance";
-            this.checkAdvance.Size = new System.Drawing.Size(69, 17);
-            this.checkAdvance.TabIndex = 8;
-            this.checkAdvance.Text = "Advance";
-            this.checkAdvance.UseVisualStyleBackColor = true;
-            // 
-            // rdbtnCuisine
-            // 
-            this.rdbtnCuisine.AutoSize = true;
-            this.rdbtnCuisine.Location = new System.Drawing.Point(451, 55);
-            this.rdbtnCuisine.Name = "rdbtnCuisine";
-            this.rdbtnCuisine.Size = new System.Drawing.Size(59, 17);
-            this.rdbtnCuisine.TabIndex = 9;
-            this.rdbtnCuisine.TabStop = true;
-            this.rdbtnCuisine.Text = "Cuisine";
-            this.rdbtnCuisine.UseVisualStyleBackColor = true;
-            // 
-            // rdbtnDessert
-            // 
-            this.rdbtnDessert.AutoSize = true;
-            this.rdbtnDessert.Location = new System.Drawing.Point(623, 55);
-            this.rdbtnDessert.Name = "rdbtnDessert";
-            this.rdbtnDessert.Size = new System.Drawing.Size(61, 17);
-            this.rdbtnDessert.TabIndex = 12;
-            this.rdbtnDessert.TabStop = true;
-            this.rdbtnDessert.Text = "Dessert";
-            this.rdbtnDessert.UseVisualStyleBackColor = true;
-            // 
-            // rdbtnBakery
-            // 
-            this.rdbtnBakery.AutoSize = true;
-            this.rdbtnBakery.Location = new System.Drawing.Point(537, 55);
-            this.rdbtnBakery.Name = "rdbtnBakery";
-            this.rdbtnBakery.Size = new System.Drawing.Size(58, 17);
-            this.rdbtnBakery.TabIndex = 13;
-            this.rdbtnBakery.TabStop = true;
-            this.rdbtnBakery.Text = "Bakery";
-            this.rdbtnBakery.UseVisualStyleBackColor = true;
             // 
             // cbSubscription
             // 
@@ -169,7 +102,7 @@
             "Premium ",
             "VIP"});
             this.cbSubscription.FormattingEnabled = true;
-            this.cbSubscription.Location = new System.Drawing.Point(451, 119);
+            this.cbSubscription.Location = new System.Drawing.Point(469, 107);
             this.cbSubscription.Name = "cbSubscription";
             this.cbSubscription.Size = new System.Drawing.Size(170, 21);
             this.cbSubscription.TabIndex = 14;
@@ -182,7 +115,11 @@
             "Stripe",
             "Bank Transfers"});
             this.cbPayM.FormattingEnabled = true;
-            this.cbPayM.Location = new System.Drawing.Point(451, 163);
+            this.cbPayM.Items.AddRange(new object[] {
+            "Credit/Debit ",
+            "PayPal",
+            "Bank Transfer"});
+            this.cbPayM.Location = new System.Drawing.Point(469, 147);
             this.cbPayM.Name = "cbPayM";
             this.cbPayM.Size = new System.Drawing.Size(170, 21);
             this.cbPayM.TabIndex = 15;
@@ -190,38 +127,38 @@
             // lblRegno
             // 
             this.lblRegno.AutoSize = true;
-            this.lblRegno.Location = new System.Drawing.Point(343, 265);
+            this.lblRegno.Location = new System.Drawing.Point(348, 233);
             this.lblRegno.Name = "lblRegno";
             this.lblRegno.Size = new System.Drawing.Size(80, 13);
             this.lblRegno.TabIndex = 16;
             this.lblRegno.Text = "Registration No";
             // 
-            // lblDate
+            // lblDateReg
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(343, 309);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(30, 13);
-            this.lblDate.TabIndex = 17;
-            this.lblDate.Text = "Date";
+            this.lblDateReg.AutoSize = true;
+            this.lblDateReg.Location = new System.Drawing.Point(348, 283);
+            this.lblDateReg.Name = "lblDateReg";
+            this.lblDateReg.Size = new System.Drawing.Size(67, 13);
+            this.lblDateReg.TabIndex = 17;
+            this.lblDateReg.Text = "Date Of Reg";
             // 
             // txtRegno
             // 
-            this.txtRegno.Location = new System.Drawing.Point(451, 258);
+            this.txtRegno.Location = new System.Drawing.Point(469, 233);
             this.txtRegno.Name = "txtRegno";
             this.txtRegno.Size = new System.Drawing.Size(121, 20);
             this.txtRegno.TabIndex = 18;
             // 
-            // dateTime
+            // dateOfReg
             // 
-            this.dateTime.Location = new System.Drawing.Point(451, 303);
-            this.dateTime.Name = "dateTime";
-            this.dateTime.Size = new System.Drawing.Size(200, 20);
-            this.dateTime.TabIndex = 19;
+            this.dateOfReg.Location = new System.Drawing.Point(469, 276);
+            this.dateOfReg.Name = "dateOfReg";
+            this.dateOfReg.Size = new System.Drawing.Size(200, 20);
+            this.dateOfReg.TabIndex = 19;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(346, 419);
+            this.btnBack.Location = new System.Drawing.Point(338, 403);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 20;
@@ -230,7 +167,7 @@
             // 
             // btnDisplayall
             // 
-            this.btnDisplayall.Location = new System.Drawing.Point(346, 368);
+            this.btnDisplayall.Location = new System.Drawing.Point(338, 343);
             this.btnDisplayall.Name = "btnDisplayall";
             this.btnDisplayall.Size = new System.Drawing.Size(75, 23);
             this.btnDisplayall.TabIndex = 21;
@@ -239,7 +176,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(623, 377);
+            this.btnSubmit.Location = new System.Drawing.Point(623, 343);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 22;
@@ -248,7 +185,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(623, 419);
+            this.btnLogout.Location = new System.Drawing.Point(623, 403);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 23;
@@ -258,7 +195,7 @@
             // lblPayment
             // 
             this.lblPayment.AutoSize = true;
-            this.lblPayment.Location = new System.Drawing.Point(343, 208);
+            this.lblPayment.Location = new System.Drawing.Point(348, 194);
             this.lblPayment.Name = "lblPayment";
             this.lblPayment.Size = new System.Drawing.Size(48, 13);
             this.lblPayment.TabIndex = 24;
@@ -271,10 +208,38 @@
             "$14.99 Monthly (Premium)",
             "$19.99 Monthly (VIP)"});
             this.cbPayment.FormattingEnabled = true;
-            this.cbPayment.Location = new System.Drawing.Point(451, 208);
+            this.cbPayment.Items.AddRange(new object[] {
+            "Pay Now",
+            "Pay Later",
+            "Paid"});
+            this.cbPayment.Location = new System.Drawing.Point(469, 191);
             this.cbPayment.Name = "cbPayment";
             this.cbPayment.Size = new System.Drawing.Size(170, 21);
             this.cbPayment.TabIndex = 25;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Beginner",
+            "Intermediate",
+            "Advance"});
+            this.comboBox1.Location = new System.Drawing.Point(469, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 26;
+            // 
+            // cbCooking
+            // 
+            this.cbCooking.FormattingEnabled = true;
+            this.cbCooking.Items.AddRange(new object[] {
+            "Cuisine",
+            "Bakery",
+            "Dessert"});
+            this.cbCooking.Location = new System.Drawing.Point(469, 65);
+            this.cbCooking.Name = "cbCooking";
+            this.cbCooking.Size = new System.Drawing.Size(121, 21);
+            this.cbCooking.TabIndex = 27;
             // 
             // FrmRegister2
             // 
@@ -282,24 +247,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(720, 454);
+            this.Controls.Add(this.cbCooking);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cbPayment);
             this.Controls.Add(this.lblPayment);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnDisplayall);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.dateTime);
+            this.Controls.Add(this.dateOfReg);
             this.Controls.Add(this.txtRegno);
-            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.lblDateReg);
             this.Controls.Add(this.lblRegno);
             this.Controls.Add(this.cbPayM);
             this.Controls.Add(this.cbSubscription);
-            this.Controls.Add(this.rdbtnBakery);
-            this.Controls.Add(this.rdbtnDessert);
-            this.Controls.Add(this.rdbtnCuisine);
-            this.Controls.Add(this.checkAdvance);
-            this.Controls.Add(this.checkIntermediate);
-            this.Controls.Add(this.checkBeginner);
             this.Controls.Add(this.lblSubscrption);
             this.Controls.Add(this.lblPayM);
             this.Controls.Add(this.lblCookClubs);
@@ -320,23 +281,19 @@
         private System.Windows.Forms.Label lblCookClubs;
         private System.Windows.Forms.Label lblPayM;
         private System.Windows.Forms.Label lblSubscrption;
-        private System.Windows.Forms.CheckBox checkBeginner;
-        private System.Windows.Forms.CheckBox checkIntermediate;
-        private System.Windows.Forms.CheckBox checkAdvance;
-        private System.Windows.Forms.RadioButton rdbtnCuisine;
-        private System.Windows.Forms.RadioButton rdbtnDessert;
-        private System.Windows.Forms.RadioButton rdbtnBakery;
         private System.Windows.Forms.ComboBox cbSubscription;
         private System.Windows.Forms.ComboBox cbPayM;
         private System.Windows.Forms.Label lblRegno;
-        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblDateReg;
         private System.Windows.Forms.TextBox txtRegno;
-        private System.Windows.Forms.DateTimePicker dateTime;
+        private System.Windows.Forms.DateTimePicker dateOfReg;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnDisplayall;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.ComboBox cbPayment;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCooking;
     }
 }
