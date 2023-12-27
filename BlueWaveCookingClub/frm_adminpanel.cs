@@ -50,7 +50,7 @@ namespace BlueWaveCookingClub
                 try
                 {
                     con.Open();
-                    string sqlquery = "INSERT INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @City, @Phone_Number, @Email, @NIC_Number, @Cooking_Experience, @Cooking_Clubs, @Subscription, @Payment_Method, @Payment, @Date_of_Reg)";
+                    string sqlquery = "INSERT INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg)";
                     using (SqlCommand com = new SqlCommand(sqlquery, con))
                     {
                         com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
@@ -59,13 +59,13 @@ namespace BlueWaveCookingClub
                         com.Parameters.AddWithValue("@Gender", cbGender.Text);
                         com.Parameters.AddWithValue("@Age", cbAge.Text);
                         com.Parameters.AddWithValue("@Address", txtAddress.Text);
-                        com.Parameters.AddWithValue("@City", txtCity.Text);
+                        
                         com.Parameters.AddWithValue("@Phone_Number", txtPhone.Text);
                         com.Parameters.AddWithValue("@Email", txtEmail.Text);
                         com.Parameters.AddWithValue("@NIC_Number", txtNIC.Text);
-                        com.Parameters.AddWithValue("@Cooking_Experience", cbExperience.Text);
+                        
                         com.Parameters.AddWithValue("@Cooking_Clubs", cbCooking.Text);
-                        com.Parameters.AddWithValue("@Subscription", cbSubscription.Text);
+                        
                         com.Parameters.AddWithValue("@Payment_Method", cbPayM.Text);
                         com.Parameters.AddWithValue("@Payment", cbPayment.Text);
                         com.Parameters.AddWithValue("@Date_of_Reg", dateOfReg.Text);
@@ -91,6 +91,31 @@ namespace BlueWaveCookingClub
                 }
             }
 
+        }
+
+        private void FrmAdminPanel_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
+            {
+                try
+                {
+                    con.Open();
+                    string sqlquery = "SELECT * FROM tbl_BlueWave";
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(sqlquery, con))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        dataGridView1.DataSource = table;
+                        dataGridView1.DataBind();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error retrieving data: " + ex.Message);
+                }
+
+
+            }
         }
     }
 

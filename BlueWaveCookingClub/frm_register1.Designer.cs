@@ -44,13 +44,11 @@
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.cbAge = new System.Windows.Forms.ComboBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.lblCity = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
-            this.txtCity = new System.Windows.Forms.TextBox();
             this.lblNIC = new System.Windows.Forms.Label();
             this.txtNIC = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -203,15 +201,6 @@
             this.txtAddress.Size = new System.Drawing.Size(237, 20);
             this.txtAddress.TabIndex = 26;
             // 
-            // lblCity
-            // 
-            this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(671, 299);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(24, 13);
-            this.lblCity.TabIndex = 28;
-            this.lblCity.Text = "City";
-            // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
@@ -254,13 +243,6 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(674, 315);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(100, 20);
-            this.txtCity.TabIndex = 46;
-            // 
             // lblNIC
             // 
             this.lblNIC.AutoSize = true;
@@ -286,13 +268,11 @@
             this.ClientSize = new System.Drawing.Size(860, 566);
             this.Controls.Add(this.txtNIC);
             this.Controls.Add(this.lblNIC);
-            this.Controls.Add(this.txtCity);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.lblCity);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.cbAge);
             this.Controls.Add(this.cbGender);
@@ -333,13 +313,11 @@
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.ComboBox cbAge;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label lblNIC;
         private System.Windows.Forms.TextBox txtNIC;
     }

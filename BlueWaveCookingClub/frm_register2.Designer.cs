@@ -30,11 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegister2));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblCookExp = new System.Windows.Forms.Label();
             this.lblCookClubs = new System.Windows.Forms.Label();
             this.lblPayM = new System.Windows.Forms.Label();
-            this.lblSubscrption = new System.Windows.Forms.Label();
-            this.cbSubscription = new System.Windows.Forms.ComboBox();
             this.cbPayM = new System.Windows.Forms.ComboBox();
             this.lblRegno = new System.Windows.Forms.Label();
             this.lblDateReg = new System.Windows.Forms.Label();
@@ -46,7 +43,6 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblPayment = new System.Windows.Forms.Label();
             this.cbPayment = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cbCooking = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -59,19 +55,10 @@
             this.panel1.Size = new System.Drawing.Size(322, 458);
             this.panel1.TabIndex = 0;
             // 
-            // lblCookExp
-            // 
-            this.lblCookExp.AutoSize = true;
-            this.lblCookExp.Location = new System.Drawing.Point(343, 22);
-            this.lblCookExp.Name = "lblCookExp";
-            this.lblCookExp.Size = new System.Drawing.Size(102, 13);
-            this.lblCookExp.TabIndex = 1;
-            this.lblCookExp.Text = "Cooking Experience";
-            // 
             // lblCookClubs
             // 
             this.lblCookClubs.AutoSize = true;
-            this.lblCookClubs.Location = new System.Drawing.Point(348, 68);
+            this.lblCookClubs.Location = new System.Drawing.Point(348, 32);
             this.lblCookClubs.Name = "lblCookClubs";
             this.lblCookClubs.Size = new System.Drawing.Size(75, 13);
             this.lblCookClubs.TabIndex = 2;
@@ -80,32 +67,11 @@
             // lblPayM
             // 
             this.lblPayM.AutoSize = true;
-            this.lblPayM.Location = new System.Drawing.Point(348, 150);
+            this.lblPayM.Location = new System.Drawing.Point(348, 77);
             this.lblPayM.Name = "lblPayM";
             this.lblPayM.Size = new System.Drawing.Size(87, 13);
             this.lblPayM.TabIndex = 3;
             this.lblPayM.Text = "Payment Method";
-            // 
-            // lblSubscrption
-            // 
-            this.lblSubscrption.AutoSize = true;
-            this.lblSubscrption.Location = new System.Drawing.Point(348, 110);
-            this.lblSubscrption.Name = "lblSubscrption";
-            this.lblSubscrption.Size = new System.Drawing.Size(65, 13);
-            this.lblSubscrption.TabIndex = 4;
-            this.lblSubscrption.Text = "Subscription";
-            // 
-            // cbSubscription
-            // 
-            this.cbSubscription.AutoCompleteCustomSource.AddRange(new string[] {
-            "Basic ",
-            "Premium ",
-            "VIP"});
-            this.cbSubscription.FormattingEnabled = true;
-            this.cbSubscription.Location = new System.Drawing.Point(469, 107);
-            this.cbSubscription.Name = "cbSubscription";
-            this.cbSubscription.Size = new System.Drawing.Size(170, 21);
-            this.cbSubscription.TabIndex = 14;
             // 
             // cbPayM
             // 
@@ -119,7 +85,7 @@
             "Credit/Debit ",
             "PayPal",
             "Bank Transfer"});
-            this.cbPayM.Location = new System.Drawing.Point(469, 147);
+            this.cbPayM.Location = new System.Drawing.Point(469, 74);
             this.cbPayM.Name = "cbPayM";
             this.cbPayM.Size = new System.Drawing.Size(170, 21);
             this.cbPayM.TabIndex = 15;
@@ -127,7 +93,7 @@
             // lblRegno
             // 
             this.lblRegno.AutoSize = true;
-            this.lblRegno.Location = new System.Drawing.Point(348, 233);
+            this.lblRegno.Location = new System.Drawing.Point(348, 167);
             this.lblRegno.Name = "lblRegno";
             this.lblRegno.Size = new System.Drawing.Size(80, 13);
             this.lblRegno.TabIndex = 16;
@@ -136,7 +102,7 @@
             // lblDateReg
             // 
             this.lblDateReg.AutoSize = true;
-            this.lblDateReg.Location = new System.Drawing.Point(348, 283);
+            this.lblDateReg.Location = new System.Drawing.Point(346, 230);
             this.lblDateReg.Name = "lblDateReg";
             this.lblDateReg.Size = new System.Drawing.Size(67, 13);
             this.lblDateReg.TabIndex = 17;
@@ -144,21 +110,21 @@
             // 
             // txtRegno
             // 
-            this.txtRegno.Location = new System.Drawing.Point(469, 233);
+            this.txtRegno.Location = new System.Drawing.Point(469, 167);
             this.txtRegno.Name = "txtRegno";
             this.txtRegno.Size = new System.Drawing.Size(121, 20);
             this.txtRegno.TabIndex = 18;
             // 
             // dateOfReg
             // 
-            this.dateOfReg.Location = new System.Drawing.Point(469, 276);
+            this.dateOfReg.Location = new System.Drawing.Point(458, 223);
             this.dateOfReg.Name = "dateOfReg";
             this.dateOfReg.Size = new System.Drawing.Size(200, 20);
             this.dateOfReg.TabIndex = 19;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(338, 403);
+            this.btnBack.Location = new System.Drawing.Point(348, 382);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 20;
@@ -167,7 +133,7 @@
             // 
             // btnDisplayall
             // 
-            this.btnDisplayall.Location = new System.Drawing.Point(338, 343);
+            this.btnDisplayall.Location = new System.Drawing.Point(338, 319);
             this.btnDisplayall.Name = "btnDisplayall";
             this.btnDisplayall.Size = new System.Drawing.Size(75, 23);
             this.btnDisplayall.TabIndex = 21;
@@ -176,7 +142,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(623, 343);
+            this.btnSubmit.Location = new System.Drawing.Point(623, 319);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 22;
@@ -185,7 +151,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(623, 403);
+            this.btnLogout.Location = new System.Drawing.Point(623, 373);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 23;
@@ -195,7 +161,7 @@
             // lblPayment
             // 
             this.lblPayment.AutoSize = true;
-            this.lblPayment.Location = new System.Drawing.Point(348, 194);
+            this.lblPayment.Location = new System.Drawing.Point(355, 122);
             this.lblPayment.Name = "lblPayment";
             this.lblPayment.Size = new System.Drawing.Size(48, 13);
             this.lblPayment.TabIndex = 24;
@@ -212,22 +178,10 @@
             "Pay Now",
             "Pay Later",
             "Paid"});
-            this.cbPayment.Location = new System.Drawing.Point(469, 191);
+            this.cbPayment.Location = new System.Drawing.Point(469, 122);
             this.cbPayment.Name = "cbPayment";
             this.cbPayment.Size = new System.Drawing.Size(170, 21);
             this.cbPayment.TabIndex = 25;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Beginner",
-            "Intermediate",
-            "Advance"});
-            this.comboBox1.Location = new System.Drawing.Point(469, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 26;
             // 
             // cbCooking
             // 
@@ -236,7 +190,7 @@
             "Cuisine",
             "Bakery",
             "Dessert"});
-            this.cbCooking.Location = new System.Drawing.Point(469, 65);
+            this.cbCooking.Location = new System.Drawing.Point(469, 32);
             this.cbCooking.Name = "cbCooking";
             this.cbCooking.Size = new System.Drawing.Size(121, 21);
             this.cbCooking.TabIndex = 27;
@@ -248,7 +202,6 @@
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(720, 454);
             this.Controls.Add(this.cbCooking);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cbPayment);
             this.Controls.Add(this.lblPayment);
             this.Controls.Add(this.btnLogout);
@@ -260,11 +213,8 @@
             this.Controls.Add(this.lblDateReg);
             this.Controls.Add(this.lblRegno);
             this.Controls.Add(this.cbPayM);
-            this.Controls.Add(this.cbSubscription);
-            this.Controls.Add(this.lblSubscrption);
             this.Controls.Add(this.lblPayM);
             this.Controls.Add(this.lblCookClubs);
-            this.Controls.Add(this.lblCookExp);
             this.Controls.Add(this.panel1);
             this.Name = "FrmRegister2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -277,11 +227,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblCookExp;
         private System.Windows.Forms.Label lblCookClubs;
         private System.Windows.Forms.Label lblPayM;
-        private System.Windows.Forms.Label lblSubscrption;
-        private System.Windows.Forms.ComboBox cbSubscription;
         private System.Windows.Forms.ComboBox cbPayM;
         private System.Windows.Forms.Label lblRegno;
         private System.Windows.Forms.Label lblDateReg;
@@ -293,7 +240,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.ComboBox cbPayment;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox cbCooking;
     }
 }

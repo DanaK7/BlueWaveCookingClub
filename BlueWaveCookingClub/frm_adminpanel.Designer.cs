@@ -36,7 +36,6 @@
             this.lblGender = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblCookClubs = new System.Windows.Forms.Label();
-            this.lblSubscrption = new System.Windows.Forms.Label();
             this.txtFirstna = new System.Windows.Forms.TextBox();
             this.txtLastna = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -52,19 +51,14 @@
             this.cbAge = new System.Windows.Forms.ComboBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.cbCooking = new System.Windows.Forms.ComboBox();
-            this.cbSubscription = new System.Windows.Forms.ComboBox();
             this.lblPayment = new System.Windows.Forms.Label();
             this.cbPayment = new System.Windows.Forms.ComboBox();
             this.lblRegno = new System.Windows.Forms.Label();
             this.txtRegno = new System.Windows.Forms.TextBox();
-            this.lblCookExp = new System.Windows.Forms.Label();
-            this.cbExperience = new System.Windows.Forms.ComboBox();
             this.lblDOB = new System.Windows.Forms.Label();
             this.dateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.lblPayM = new System.Windows.Forms.Label();
             this.cbPayM = new System.Windows.Forms.ComboBox();
-            this.lblCity = new System.Windows.Forms.Label();
-            this.txtCity = new System.Windows.Forms.TextBox();
             this.lblDateReg = new System.Windows.Forms.Label();
             this.dateOfReg = new System.Windows.Forms.DateTimePicker();
             this.lblNIC = new System.Windows.Forms.Label();
@@ -111,7 +105,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(273, 100);
+            this.lblPhone.Location = new System.Drawing.Point(287, 67);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(78, 13);
             this.lblPhone.TabIndex = 4;
@@ -138,20 +132,11 @@
             // lblCookClubs
             // 
             this.lblCookClubs.AutoSize = true;
-            this.lblCookClubs.Location = new System.Drawing.Point(529, 136);
+            this.lblCookClubs.Location = new System.Drawing.Point(290, 134);
             this.lblCookClubs.Name = "lblCookClubs";
             this.lblCookClubs.Size = new System.Drawing.Size(70, 13);
             this.lblCookClubs.TabIndex = 8;
             this.lblCookClubs.Text = "Cooking Club";
-            // 
-            // lblSubscrption
-            // 
-            this.lblSubscrption.AutoSize = true;
-            this.lblSubscrption.Location = new System.Drawing.Point(537, 175);
-            this.lblSubscrption.Name = "lblSubscrption";
-            this.lblSubscrption.Size = new System.Drawing.Size(60, 13);
-            this.lblSubscrption.TabIndex = 9;
-            this.lblSubscrption.Text = "Subcription";
             // 
             // txtFirstna
             // 
@@ -183,7 +168,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(366, 97);
+            this.txtPhone.Location = new System.Drawing.Point(366, 63);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(157, 20);
             this.txtPhone.TabIndex = 14;
@@ -191,7 +176,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 254);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 237);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(751, 285);
             this.dataGridView1.TabIndex = 20;
@@ -298,26 +283,10 @@
             "Cuisine",
             "Bakery",
             "Dessert"});
-            this.cbCooking.Location = new System.Drawing.Point(605, 131);
+            this.cbCooking.Location = new System.Drawing.Point(366, 134);
             this.cbCooking.Name = "cbCooking";
             this.cbCooking.Size = new System.Drawing.Size(157, 21);
             this.cbCooking.TabIndex = 29;
-            // 
-            // cbSubscription
-            // 
-            this.cbSubscription.AutoCompleteCustomSource.AddRange(new string[] {
-            "Basic ",
-            "Premium ",
-            "VIP"});
-            this.cbSubscription.FormattingEnabled = true;
-            this.cbSubscription.Items.AddRange(new object[] {
-            "$9.99 (Basic)",
-            "$14.99 (Premuim)",
-            "$19.99 (VIP)"});
-            this.cbSubscription.Location = new System.Drawing.Point(603, 172);
-            this.cbSubscription.Name = "cbSubscription";
-            this.cbSubscription.Size = new System.Drawing.Size(157, 21);
-            this.cbSubscription.TabIndex = 30;
             // 
             // lblPayment
             // 
@@ -360,31 +329,6 @@
             this.txtRegno.Size = new System.Drawing.Size(175, 20);
             this.txtRegno.TabIndex = 35;
             // 
-            // lblCookExp
-            // 
-            this.lblCookExp.AutoSize = true;
-            this.lblCookExp.Location = new System.Drawing.Point(258, 136);
-            this.lblCookExp.Name = "lblCookExp";
-            this.lblCookExp.Size = new System.Drawing.Size(102, 13);
-            this.lblCookExp.TabIndex = 36;
-            this.lblCookExp.Text = "Cooking Experience";
-            // 
-            // cbExperience
-            // 
-            this.cbExperience.AutoCompleteCustomSource.AddRange(new string[] {
-            "Beginner",
-            "Intermediate",
-            "Advance"});
-            this.cbExperience.FormattingEnabled = true;
-            this.cbExperience.Items.AddRange(new object[] {
-            "Beginner",
-            "Intermediate",
-            "Advance"});
-            this.cbExperience.Location = new System.Drawing.Point(366, 134);
-            this.cbExperience.Name = "cbExperience";
-            this.cbExperience.Size = new System.Drawing.Size(157, 21);
-            this.cbExperience.TabIndex = 37;
-            // 
             // lblDOB
             // 
             this.lblDOB.AutoSize = true;
@@ -426,26 +370,10 @@
             this.cbPayM.Size = new System.Drawing.Size(157, 21);
             this.cbPayM.TabIndex = 41;
             // 
-            // lblCity
-            // 
-            this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(306, 67);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(24, 13);
-            this.lblCity.TabIndex = 42;
-            this.lblCity.Text = "City";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(366, 60);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(149, 20);
-            this.txtCity.TabIndex = 43;
-            // 
             // lblDateReg
             // 
             this.lblDateReg.AutoSize = true;
-            this.lblDateReg.Location = new System.Drawing.Point(12, 203);
+            this.lblDateReg.Location = new System.Drawing.Point(12, 206);
             this.lblDateReg.Name = "lblDateReg";
             this.lblDateReg.Size = new System.Drawing.Size(67, 13);
             this.lblDateReg.TabIndex = 44;
@@ -453,7 +381,7 @@
             // 
             // dateOfReg
             // 
-            this.dateOfReg.Location = new System.Drawing.Point(98, 203);
+            this.dateOfReg.Location = new System.Drawing.Point(98, 200);
             this.dateOfReg.Name = "dateOfReg";
             this.dateOfReg.Size = new System.Drawing.Size(183, 20);
             this.dateOfReg.TabIndex = 45;
@@ -461,7 +389,7 @@
             // lblNIC
             // 
             this.lblNIC.AutoSize = true;
-            this.lblNIC.Location = new System.Drawing.Point(294, 206);
+            this.lblNIC.Location = new System.Drawing.Point(295, 102);
             this.lblNIC.Name = "lblNIC";
             this.lblNIC.Size = new System.Drawing.Size(65, 13);
             this.lblNIC.TabIndex = 46;
@@ -469,7 +397,7 @@
             // 
             // txtNIC
             // 
-            this.txtNIC.Location = new System.Drawing.Point(366, 203);
+            this.txtNIC.Location = new System.Drawing.Point(365, 100);
             this.txtNIC.Name = "txtNIC";
             this.txtNIC.Size = new System.Drawing.Size(157, 20);
             this.txtNIC.TabIndex = 47;
@@ -484,19 +412,14 @@
             this.Controls.Add(this.lblNIC);
             this.Controls.Add(this.dateOfReg);
             this.Controls.Add(this.lblDateReg);
-            this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.lblCity);
             this.Controls.Add(this.cbPayM);
             this.Controls.Add(this.lblPayM);
             this.Controls.Add(this.dateOfBirth);
             this.Controls.Add(this.lblDOB);
-            this.Controls.Add(this.cbExperience);
-            this.Controls.Add(this.lblCookExp);
             this.Controls.Add(this.txtRegno);
             this.Controls.Add(this.lblRegno);
             this.Controls.Add(this.cbPayment);
             this.Controls.Add(this.lblPayment);
-            this.Controls.Add(this.cbSubscription);
             this.Controls.Add(this.cbCooking);
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.cbAge);
@@ -512,7 +435,6 @@
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtLastna);
             this.Controls.Add(this.txtFirstna);
-            this.Controls.Add(this.lblSubscrption);
             this.Controls.Add(this.lblCookClubs);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblGender);
@@ -524,6 +446,7 @@
             this.Name = "FrmAdminPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Panel";
+            this.Load += new System.EventHandler(this.FrmAdminPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -540,7 +463,6 @@
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblCookClubs;
-        private System.Windows.Forms.Label lblSubscrption;
         private System.Windows.Forms.TextBox txtFirstna;
         private System.Windows.Forms.TextBox txtLastna;
         private System.Windows.Forms.TextBox txtAddress;
@@ -556,19 +478,14 @@
         private System.Windows.Forms.ComboBox cbAge;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.ComboBox cbCooking;
-        private System.Windows.Forms.ComboBox cbSubscription;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.ComboBox cbPayment;
         private System.Windows.Forms.Label lblRegno;
         private System.Windows.Forms.TextBox txtRegno;
-        private System.Windows.Forms.Label lblCookExp;
-        private System.Windows.Forms.ComboBox cbExperience;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.DateTimePicker dateOfBirth;
         private System.Windows.Forms.Label lblPayM;
         private System.Windows.Forms.ComboBox cbPayM;
-        private System.Windows.Forms.Label lblCity;
-        private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label lblDateReg;
         private System.Windows.Forms.DateTimePicker dateOfReg;
         private System.Windows.Forms.Label lblNIC;
