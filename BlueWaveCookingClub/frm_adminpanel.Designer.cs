@@ -199,6 +199,7 @@
             this.btnUpdate.TabIndex = 22;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSearch
             // 
@@ -208,6 +209,7 @@
             this.btnSearch.TabIndex = 23;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDelete
             // 
@@ -217,6 +219,7 @@
             this.btnDelete.TabIndex = 24;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -226,6 +229,7 @@
             this.btnClear.TabIndex = 25;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnLogout
             // 
@@ -235,6 +239,7 @@
             this.btnLogout.TabIndex = 26;
             this.btnLogout.Text = "Log Out";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // cbAge
             // 
