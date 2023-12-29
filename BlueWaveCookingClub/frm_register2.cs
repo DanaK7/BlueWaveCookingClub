@@ -44,9 +44,26 @@ namespace BlueWaveCookingClub
             string dataFromForm1 = registrationForm1.GetData();
             string dataFromForm2 = registrationForm2.GetData();
 
-            // Display the data, you can use MessageBox for demonstration purposes
+            // Display the data 
             MessageBox.Show($"Data from Form 1: {dataFromForm1}\nData from Form 2: {dataFromForm2}");
 
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            // Assuming FrmLogin is the name of your login form
+            FrmLogin loginForm = new FrmLogin();
+
+            // Close the current form
+            this.Close();
+
+            // Show the login form
+            loginForm.Show();
         }
     }
 }
