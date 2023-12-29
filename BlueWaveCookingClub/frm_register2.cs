@@ -19,17 +19,18 @@ namespace BlueWaveCookingClub
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            
             {
-                // Create a new instance for registration form 1
+                // Create a new instance of FrmRegister1 (registration form 1)
                 FrmRegister1 registrationForm1 = new FrmRegister1();
 
-
-                // Show the registration form 1
+                // Show FrmRegister1
                 registrationForm1.Show();
 
-                //Hide the current form (register form 2)
+                // Hide the current form (FrmRegister2 )
                 this.Hide();
             }
+
         }
     }
 }
