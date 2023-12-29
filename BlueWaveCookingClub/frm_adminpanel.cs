@@ -97,22 +97,18 @@ namespace BlueWaveCookingClub
         {
             using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
             {
-                try
-                {
-                    con.Open();
-                    string sqlquery = "SELECT * FROM tbl_BlueWave";
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(sqlquery, con))
-                    {
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-                        dataGridView1.DataSource = table;
-                        dataGridView1.DataBind();
-                    }
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Error retrieving data: " + ex.Message);
-                }
+
+                con.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM tbl_BlueWave", con);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                dataGridView1.DataSource = dtbl;
+
+
+
+
+
 
 
             }
