@@ -140,6 +140,7 @@
             this.btnDisplayall.TabIndex = 21;
             this.btnDisplayall.Text = "Display All";
             this.btnDisplayall.UseVisualStyleBackColor = true;
+            this.btnDisplayall.Click += new System.EventHandler(this.btnDisplayall_Click);
             // 
             // btnSubmit
             // 
