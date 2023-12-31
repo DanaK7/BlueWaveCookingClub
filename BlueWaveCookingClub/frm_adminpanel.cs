@@ -218,8 +218,9 @@ namespace BlueWaveCookingClub
 
                 using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True"))
                 {
-
+                    try
                     {
+
                         con.Open();
                         string deleteQuery = "DELETE FROM tbl_BlueWave WHERE ID = @Registratio_No";
 
@@ -232,18 +233,26 @@ namespace BlueWaveCookingClub
                         }
 
                     }
+
+                    catch (SqlException ex)
+
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+
                 }
-
-
-
-
-
-
-
-
-
-
             }
+            
+               
+
+
+
+
+
+
+
+
+        }
 
                 
 
@@ -259,7 +268,7 @@ namespace BlueWaveCookingClub
                         con.Open();
 
                         // Warning: This query will delete all records in the table. Be cautious when using it.
-                        string deleteQuery = "DELETE FROM tbl_BlueWave";
+                        string deleteQuery = "CLEAR FROM tbl_BlueWave";
 
                         using (SqlCommand com = new SqlCommand(deleteQuery, con))
                         {
