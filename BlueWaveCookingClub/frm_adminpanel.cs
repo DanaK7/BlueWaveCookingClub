@@ -183,10 +183,10 @@ namespace BlueWaveCookingClub
                     {
                         con.Open();
 
-                        // Assuming you want to search based on the first name
+                        
                         string searchFirstName = txtFirstna.Text;
 
-                        string sqlquery = "SELECT * FROM tbl_BlueWave WHERE First_Name LIKE @SearchFirstName";
+                        string sqlquery = "SELECT * FROM tbl_BlueWave WHERE First_Name @First_Name";
                         using (SqlCommand com = new SqlCommand(sqlquery, con))
                         {
                             com.Parameters.AddWithValue("@SearchFirstName", "%" + searchFirstName + "%");
@@ -242,10 +242,10 @@ namespace BlueWaveCookingClub
 
                 }
             }
-            
-               
 
 
+
+            RefreshDataGridView();
 
 
 
@@ -267,7 +267,7 @@ namespace BlueWaveCookingClub
                     {
                         con.Open();
 
-                        // Warning: This query will delete all records in the table. Be cautious when using it.
+                        
                         string deleteQuery = "CLEAR FROM tbl_BlueWave";
 
                         using (SqlCommand com = new SqlCommand(deleteQuery, con))
@@ -282,7 +282,7 @@ namespace BlueWaveCookingClub
                     }
                 }
 
-                // Refresh the DataGridView if needed
+               
                 RefreshDataGridView();
         }
 
@@ -302,7 +302,7 @@ namespace BlueWaveCookingClub
         private void btnLogout_Click(object sender, EventArgs e)
         {
 
-            // Assuming FrmLogin is the name of your login form
+            // Open Login Form
             FrmLogin loginForm = new FrmLogin();
 
             // Close the current form
@@ -311,7 +311,9 @@ namespace BlueWaveCookingClub
             // Show the login form
             loginForm.Show();
         }
+
+       
     }
 }
-    }
+    
 
