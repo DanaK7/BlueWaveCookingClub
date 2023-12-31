@@ -245,7 +245,6 @@ namespace BlueWaveCookingClub
 
 
 
-            RefreshDataGridView();
 
 
 
