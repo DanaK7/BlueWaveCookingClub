@@ -173,75 +173,10 @@ namespace BlueWaveCookingClub
             
 
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
+       
 
-            {
-                using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True"))
-                {
-                    try
-                    {
-                        con.Open();
-
-                        
-                        string searchFirstName = txtFirstna.Text;
-
-                        string sqlquery = "SELECT * FROM tbl_BlueWave WHERE First_Name @First_Name";
-                        using (SqlCommand com = new SqlCommand(sqlquery, con))
-                        {
-                            com.Parameters.AddWithValue("@SearchFirstName", "%" + searchFirstName + "%");
-
-                            SqlDataAdapter sqlDa = new SqlDataAdapter(com);
-                            DataTable dtbl = new DataTable();
-                            sqlDa.Fill(dtbl);
-
-                            dataGridView1.DataSource = dtbl;
-
-                            if (dtbl.Rows.Count == 0)
-                            {
-                                MessageBox.Show("No matching records found.");
-                            }
-                        }
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-                }
-            }
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-
-            {
-
-                using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True"))
-                {
-                    try
-                    {
-
-                        con.Open();
-                        string deleteQuery = "DELETE FROM tbl_BlueWave WHERE ID = @Registratio_No";
-
-                        using (SqlCommand com = new SqlCommand(deleteQuery, con))
-                        {
-                            com.Parameters.AddWithValue("@Registration_No", txtRegno.Text);
-                            com.ExecuteNonQuery();
-                            MessageBox.Show("Data deleted successfully!");
-
-                        }
-
-                    }
-
-                    catch (SqlException ex)
-
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-
-                }
-            }
+        
+                    
 
 
 
@@ -311,7 +246,30 @@ namespace BlueWaveCookingClub
             loginForm.Show();
         }
 
-       
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Delete UserTab Where Registration No=@Registration_No ", con);
+            cmd.Parameters.AddWithValue("@Registration_No",int.Parse (txtRegno.Text));
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Successfully Deleted");
+
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select * from UserTab Where Registration No=@Registration_No", con);
+            cmd.Parameters.AddWithValue("@Registration_No", int.Parse(txtRegno.Text));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource=dt;
+        }
     }
 }
     
