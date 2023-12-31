@@ -35,7 +35,7 @@ namespace BlueWaveCookingClub
 
                
 
-                MessageBox.Show("dsfsdfsdcv");
+                MessageBox.Show("Data Inserted sucessfully !");
 
                ;
             }
@@ -48,16 +48,17 @@ namespace BlueWaveCookingClub
 
 
         }
-       
+
 
         /* using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True"))
          {
              try
              {
                  con.Open();
-                 string sqlquery =  "INSERT INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg)";
+                 string sqlquery =  "INSERT INTO tbl_BlueWave VALUES(@Registration_No,@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg)";
                  using (SqlCommand com = new SqlCommand(sqlquery, con))
                  {
+                     com.Parameters.AddWithValue("@Registration_No", txtRegno.Text);
                      com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
                      com.Parameters.AddWithValue("@Last_Name", txtLastna.Text);
                      com.Parameters.AddWithValue("@Date_Of_Birth", dateOfBirth.Text);
@@ -131,6 +132,7 @@ namespace BlueWaveCookingClub
                     string sqlquery = "UPDATE INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg)";
                     using (SqlCommand com = new SqlCommand(sqlquery, con))
                     {
+                        com.Parameters.AddWithValue("@Registration_No", txtRegno.Text);
                         com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
                         com.Parameters.AddWithValue("@Last_Name", txtLastna.Text);
                         com.Parameters.AddWithValue("@Date_Of_Birth", dateOfBirth.Text);
@@ -212,64 +214,39 @@ namespace BlueWaveCookingClub
 
         private void btnDelete_Click(object sender, EventArgs e)
 
-        {
-            
+            {
+
                 using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True"))
                 {
-                    try
+
                     {
                         con.Open();
-                        string deleteQuery = "DELETE FROM tbl_BlueWave WHERE ID = @Reg_No";
+                        string deleteQuery = "DELETE FROM tbl_BlueWave WHERE ID = @Registratio_No";
 
                         using (SqlCommand com = new SqlCommand(deleteQuery, con))
                         {
-                            com.Parameters.AddWithValue("@ID",);
+                            com.Parameters.AddWithValue("@Registration_No", txtRegno.Text);
                             com.ExecuteNonQuery();
                             MessageBox.Show("Data deleted successfully!");
+
                         }
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
+
                     }
                 }
 
-                // Refresh the DataGridView after deletion
-                RefreshDataGridView();
-            }
-            else
-            {
-                MessageBox.Show("Please select a record to delete.");
-            }
-        }
 
-        // Method to get the ID of the selected row in the DataGridView
-        private int GetSelectedRowID()
-        {
-            int selectedRowID = 0;
 
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                // Assuming the first cell in the selected row contains the ID
-                selectedRowID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
+
+
+
+
+
+
+
             }
 
-            return selectedRowID;
-        }
+                
 
-        // Method to refresh the DataGridView after deletion
-        private void RefreshDataGridView()
-        {
-            using (SqlConnection con = new SqlConnection("Your_Connection_String_Here"))
-            {
-                con.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM tbl_BlueWave", con);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-
-                dataGridView1.DataSource = dtbl;
-            }
-        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
