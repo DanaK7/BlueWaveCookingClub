@@ -60,7 +60,6 @@
             this.txtRegno = new System.Windows.Forms.TextBox();
             this.lblDateReg = new System.Windows.Forms.Label();
             this.dateOfReg = new System.Windows.Forms.DateTimePicker();
-            this.btnDisplayall = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -365,18 +364,9 @@
             this.dateOfReg.Size = new System.Drawing.Size(200, 20);
             this.dateOfReg.TabIndex = 62;
             // 
-            // btnDisplayall
-            // 
-            this.btnDisplayall.Location = new System.Drawing.Point(407, 572);
-            this.btnDisplayall.Name = "btnDisplayall";
-            this.btnDisplayall.Size = new System.Drawing.Size(75, 23);
-            this.btnDisplayall.TabIndex = 63;
-            this.btnDisplayall.Text = "Display All";
-            this.btnDisplayall.UseVisualStyleBackColor = true;
-            // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(569, 572);
+            this.btnSubmit.Location = new System.Drawing.Point(406, 572);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 23;
@@ -401,7 +391,6 @@
             this.ClientSize = new System.Drawing.Size(860, 602);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.btnDisplayall);
             this.Controls.Add(this.dateOfReg);
             this.Controls.Add(this.lblDateReg);
             this.Controls.Add(this.txtRegno);
@@ -474,7 +463,6 @@
         private System.Windows.Forms.TextBox txtRegno;
         private System.Windows.Forms.Label lblDateReg;
         private System.Windows.Forms.DateTimePicker dateOfReg;
-        private System.Windows.Forms.Button btnDisplayall;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnLogout;
     }
