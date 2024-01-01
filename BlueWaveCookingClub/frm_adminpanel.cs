@@ -28,7 +28,7 @@ namespace BlueWaveCookingClub
 
                 con.Open();
 
-                string sqlquery = "INSERT INTO tbl_BlueWave VALUES('" + txtFirstna.Text + "','" + txtLastna.Text + "','" + txtEmail.Text + "','" + txtAddress.Text + "','" + cbGender.Text + "','" + txtPhone.Text + "','" + cbAge.Text + "','" + cbCooking.Text + "','" + cbPayment.Text + "')";
+                string sqlquery = "INSERT INTO tbl_BlueWave VALUES('" + txtFirstna.Text + "','" + txtLastna.Text + "','" + dateOfBirth.Text + "','" + cbGender.Text + "','" + cbAge.Text + "','" + txtAddress.Text + "','" + txtPhone.Text + "','" + txtEmail.Text + "','" + txtNIC.Text + "','" + cbCooking.Text + "','" + cbPayM.Text + "','" + cbPayment.Text + "','" + dateOfReg.Text + "')";
 
                 SqlCommand com = new SqlCommand(sqlquery, con);
                 com.ExecuteNonQuery();
@@ -132,7 +132,7 @@ namespace BlueWaveCookingClub
                     string sqlquery = "UPDATE INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg)";
                     using (SqlCommand com = new SqlCommand(sqlquery, con))
                     {
-                        com.Parameters.AddWithValue("@Registration_No", txtRegno.Text);
+                        
                         com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
                         com.Parameters.AddWithValue("@Last_Name", txtLastna.Text);
                         com.Parameters.AddWithValue("@Date_Of_Birth", dateOfBirth.Text);
@@ -251,7 +251,7 @@ namespace BlueWaveCookingClub
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True");
             con.Open();
             SqlCommand cmd = new SqlCommand("Delete UserTab Where Registration No=@Registration_No ", con);
-            cmd.Parameters.AddWithValue("@Registration_No",int.Parse (txtRegno.Text));
+            cmd.Parameters.AddWithValue("@Registration_No",int.Parse (txtNIC.Text));
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Successfully Deleted");
@@ -264,11 +264,32 @@ namespace BlueWaveCookingClub
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True");
             con.Open();
             SqlCommand cmd = new SqlCommand("Select * from UserTab Where Registration No=@Registration_No", con);
-            cmd.Parameters.AddWithValue("@Registration_No", int.Parse(txtRegno.Text));
+            cmd.Parameters.AddWithValue("@Registration_No", int.Parse(txtNIC.Text));
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource=dt;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
+            {
+
+                con.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM tbl_BlueWave", con);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                dataGridView1.DataSource = dtbl;
+
+
+
+
+
+
+
+            }
         }
     }
 }

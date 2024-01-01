@@ -54,7 +54,7 @@
             this.lblPayment = new System.Windows.Forms.Label();
             this.cbPayment = new System.Windows.Forms.ComboBox();
             this.lblRegno = new System.Windows.Forms.Label();
-            this.txtRegno = new System.Windows.Forms.TextBox();
+            this.txtNIC = new System.Windows.Forms.TextBox();
             this.lblDOB = new System.Windows.Forms.Label();
             this.dateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.lblPayM = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.lblDateReg = new System.Windows.Forms.Label();
             this.dateOfReg = new System.Windows.Forms.DateTimePicker();
             this.lblNIC = new System.Windows.Forms.Label();
-            this.txtNIC = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,7 +193,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(164, 545);
+            this.btnUpdate.Location = new System.Drawing.Point(216, 545);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 22;
@@ -327,17 +327,17 @@
             this.lblRegno.TabIndex = 34;
             this.lblRegno.Text = "Registration No";
             // 
-            // txtRegno
+            // txtNIC
             // 
-            this.txtRegno.Location = new System.Drawing.Point(106, 20);
-            this.txtRegno.Name = "txtRegno";
-            this.txtRegno.Size = new System.Drawing.Size(175, 20);
-            this.txtRegno.TabIndex = 35;
+            this.txtNIC.Location = new System.Drawing.Point(366, 91);
+            this.txtNIC.Name = "txtNIC";
+            this.txtNIC.Size = new System.Drawing.Size(175, 20);
+            this.txtNIC.TabIndex = 35;
             // 
             // lblDOB
             // 
             this.lblDOB.AutoSize = true;
-            this.lblDOB.Location = new System.Drawing.Point(528, 97);
+            this.lblDOB.Location = new System.Drawing.Point(547, 94);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(66, 13);
             this.lblDOB.TabIndex = 38;
@@ -400,12 +400,15 @@
             this.lblNIC.TabIndex = 46;
             this.lblNIC.Text = "NIC Number";
             // 
-            // txtNIC
+            // button1
             // 
-            this.txtNIC.Location = new System.Drawing.Point(365, 100);
-            this.txtNIC.Name = "txtNIC";
-            this.txtNIC.Size = new System.Drawing.Size(157, 20);
-            this.txtNIC.TabIndex = 47;
+            this.button1.Location = new System.Drawing.Point(125, 545);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmAdminPanel
             // 
@@ -413,7 +416,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(800, 580);
-            this.Controls.Add(this.txtNIC);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblNIC);
             this.Controls.Add(this.dateOfReg);
             this.Controls.Add(this.lblDateReg);
@@ -421,7 +424,7 @@
             this.Controls.Add(this.lblPayM);
             this.Controls.Add(this.dateOfBirth);
             this.Controls.Add(this.lblDOB);
-            this.Controls.Add(this.txtRegno);
+            this.Controls.Add(this.txtNIC);
             this.Controls.Add(this.lblRegno);
             this.Controls.Add(this.cbPayment);
             this.Controls.Add(this.lblPayment);
@@ -486,7 +489,7 @@
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.ComboBox cbPayment;
         private System.Windows.Forms.Label lblRegno;
-        private System.Windows.Forms.TextBox txtRegno;
+        private System.Windows.Forms.TextBox txtNIC;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.DateTimePicker dateOfBirth;
         private System.Windows.Forms.Label lblPayM;
@@ -494,6 +497,6 @@
         private System.Windows.Forms.Label lblDateReg;
         private System.Windows.Forms.DateTimePicker dateOfReg;
         private System.Windows.Forms.Label lblNIC;
-        private System.Windows.Forms.TextBox txtNIC;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BlueWaveCookingClub
 {
@@ -27,19 +31,56 @@ namespace BlueWaveCookingClub
 
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
+        
+
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
+            try
             {
-                // Create a new instance for registration form 2
-                FrmRegister2 registrationForm2 = new FrmRegister2();
+                SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False");
+                con.Open();
+                string sqlquery = "INSERT INTO tbl_BlueWave VALUES(@Registration_No,@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg )";
+                //SqlCommand com = new SqlCommand(sqlquery, con);
+                using (SqlCommand com = new SqlCommand(sqlquery, con))
+                {
+                    com.Parameters.AddWithValue("@Registration_No", txtRegno.Text);
+                    com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
+                    com.Parameters.AddWithValue("@Last_Name", txtLastna.Text);
+                    com.Parameters.AddWithValue("@Date_Of_Birth", dateOfBirth.Text);
+                    com.Parameters.AddWithValue("@Gender", cbGender.Text);
+                    com.Parameters.AddWithValue("@Age", cbAge.Text);
+                    com.Parameters.AddWithValue("@Address", txtAddress.Text);
+
+                    com.Parameters.AddWithValue("@Phone_Number", txtPhone.Text);
+                    com.Parameters.AddWithValue("@Email", txtEmail.Text);
+                    com.Parameters.AddWithValue("@NIC_Number", txtNIC.Text);
+
+                    com.Parameters.AddWithValue("@Cooking_Clubs", cbCooking.Text);
+
+                    com.Parameters.AddWithValue("@Payment_Method", cbPayM.Text);
+                    com.Parameters.AddWithValue("@Payment", cbPayment.Text);
+                    com.Parameters.AddWithValue("@Date_of_Reg", dateOfReg.Text);
 
 
-                // Show the registration form 2
-                registrationForm2.Show();
 
-                //Hide the current form (register form 1)
-                this.Hide();
+
+
+                    com.ExecuteNonQuery();
+                    MessageBox.Show("Submitted sucessfully !");
+                    ;
+                }
             }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+
+
+
         }
+
+
     }
 }
+
