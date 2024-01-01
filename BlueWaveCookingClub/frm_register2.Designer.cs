@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegister2));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblCookClubs = new System.Windows.Forms.Label();
             this.lblPayM = new System.Windows.Forms.Label();
             this.cbPayM = new System.Windows.Forms.ComboBox();
             this.lblRegno = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.lblPayment = new System.Windows.Forms.Label();
             this.cbPayment = new System.Windows.Forms.ComboBox();
             this.cbCooking = new System.Windows.Forms.ComboBox();
+            this.lblCookClubs = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,15 +54,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 458);
             this.panel1.TabIndex = 0;
-            // 
-            // lblCookClubs
-            // 
-            this.lblCookClubs.AutoSize = true;
-            this.lblCookClubs.Location = new System.Drawing.Point(348, 32);
-            this.lblCookClubs.Name = "lblCookClubs";
-            this.lblCookClubs.Size = new System.Drawing.Size(75, 13);
-            this.lblCookClubs.TabIndex = 2;
-            this.lblCookClubs.Text = "Cooking Clubs";
             // 
             // lblPayM
             // 
@@ -160,7 +151,6 @@
             this.btnLogout.TabIndex = 23;
             this.btnLogout.Text = "Log Out";
             this.btnLogout.UseVisualStyleBackColor = true;
-           
             // 
             // lblPayment
             // 
@@ -199,6 +189,15 @@
             this.cbCooking.Size = new System.Drawing.Size(121, 21);
             this.cbCooking.TabIndex = 27;
             // 
+            // lblCookClubs
+            // 
+            this.lblCookClubs.AutoSize = true;
+            this.lblCookClubs.Location = new System.Drawing.Point(348, 32);
+            this.lblCookClubs.Name = "lblCookClubs";
+            this.lblCookClubs.Size = new System.Drawing.Size(75, 13);
+            this.lblCookClubs.TabIndex = 2;
+            this.lblCookClubs.Text = "Cooking Clubs";
+            // 
             // FrmRegister2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,7 +230,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblCookClubs;
         private System.Windows.Forms.Label lblPayM;
         private System.Windows.Forms.ComboBox cbPayM;
         private System.Windows.Forms.Label lblRegno;
@@ -245,5 +243,6 @@
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.ComboBox cbPayment;
         private System.Windows.Forms.ComboBox cbCooking;
+        private System.Windows.Forms.Label lblCookClubs;
     }
 }
