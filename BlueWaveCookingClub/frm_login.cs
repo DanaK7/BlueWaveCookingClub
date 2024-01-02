@@ -91,7 +91,7 @@ namespace BlueWaveCookingClub
                 // Click event for the registration link label
                 FrmRegister1 registrationForm1 = new FrmRegister1();
 
-                // Show the Registration Form 1 as a modal dnialog.
+                // Show the Registration Form 1 as a modal dialog.
                 registrationForm1.ShowDialog();
             }
 

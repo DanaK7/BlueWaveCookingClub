@@ -37,13 +37,17 @@ namespace BlueWaveCookingClub
         {
             try
             {
+                //Connection to the SQL Server using SqlConnection
                 SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False");
                 con.Open();
+
+                // SQL query to insert data into the 'tbl_BlueWave' table
                 string sqlquery = "INSERT INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg )";
-                //SqlCommand com = new SqlCommand(sqlquery, con);
+
+                //SqlCommand with parameters to avoid SQL injection
                 using (SqlCommand com = new SqlCommand(sqlquery, con))
                 {
-                   
+                 //Parameter values based on user input from textboxes and combo boxes
                     com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
                     com.Parameters.AddWithValue("@Last_Name", txtLastna.Text);
                     com.Parameters.AddWithValue("@Date_Of_Birth", dateOfBirth.Text);
@@ -64,7 +68,7 @@ namespace BlueWaveCookingClub
 
 
 
-
+                    //SQL command to insert data into the database
                     com.ExecuteNonQuery();
                     MessageBox.Show("Submitted sucessfully !");
                     ;
@@ -72,6 +76,7 @@ namespace BlueWaveCookingClub
             }
             catch (SqlException ex)
             {
+                // Display a success message to the user
                 MessageBox.Show("Error: " + ex.Message);
             }
 
