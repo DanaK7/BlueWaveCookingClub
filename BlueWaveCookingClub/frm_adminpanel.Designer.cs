@@ -53,7 +53,6 @@
             this.cbCooking = new System.Windows.Forms.ComboBox();
             this.lblPayment = new System.Windows.Forms.Label();
             this.cbPayment = new System.Windows.Forms.ComboBox();
-            this.lblRegno = new System.Windows.Forms.Label();
             this.txtNIC = new System.Windows.Forms.TextBox();
             this.lblDOB = new System.Windows.Forms.Label();
             this.dateOfBirth = new System.Windows.Forms.DateTimePicker();
@@ -62,14 +61,16 @@
             this.lblDateReg = new System.Windows.Forms.Label();
             this.dateOfReg = new System.Windows.Forms.DateTimePicker();
             this.lblNIC = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstna
             // 
             this.lblFirstna.AutoSize = true;
-            this.lblFirstna.Location = new System.Drawing.Point(303, 23);
+            this.lblFirstna.Location = new System.Drawing.Point(12, 9);
             this.lblFirstna.Name = "lblFirstna";
             this.lblFirstna.Size = new System.Drawing.Size(57, 13);
             this.lblFirstna.TabIndex = 0;
@@ -78,7 +79,7 @@
             // lblLastna
             // 
             this.lblLastna.AutoSize = true;
-            this.lblLastna.Location = new System.Drawing.Point(536, 23);
+            this.lblLastna.Location = new System.Drawing.Point(307, 9);
             this.lblLastna.Name = "lblLastna";
             this.lblLastna.Size = new System.Drawing.Size(58, 13);
             this.lblLastna.TabIndex = 1;
@@ -87,7 +88,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(12, 63);
+            this.lblAddress.Location = new System.Drawing.Point(12, 42);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(45, 13);
             this.lblAddress.TabIndex = 2;
@@ -96,7 +97,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(521, 63);
+            this.lblEmail.Location = new System.Drawing.Point(295, 45);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(73, 13);
             this.lblEmail.TabIndex = 3;
@@ -105,7 +106,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(287, 67);
+            this.lblPhone.Location = new System.Drawing.Point(12, 70);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(78, 13);
             this.lblPhone.TabIndex = 4;
@@ -123,7 +124,7 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(12, 134);
+            this.lblAge.Location = new System.Drawing.Point(307, 94);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(26, 13);
             this.lblAge.TabIndex = 6;
@@ -132,7 +133,7 @@
             // lblCookClubs
             // 
             this.lblCookClubs.AutoSize = true;
-            this.lblCookClubs.Location = new System.Drawing.Point(290, 134);
+            this.lblCookClubs.Location = new System.Drawing.Point(12, 134);
             this.lblCookClubs.Name = "lblCookClubs";
             this.lblCookClubs.Size = new System.Drawing.Size(70, 13);
             this.lblCookClubs.TabIndex = 8;
@@ -140,35 +141,35 @@
             // 
             // txtFirstna
             // 
-            this.txtFirstna.Location = new System.Drawing.Point(366, 20);
+            this.txtFirstna.Location = new System.Drawing.Point(106, 9);
             this.txtFirstna.Name = "txtFirstna";
             this.txtFirstna.Size = new System.Drawing.Size(157, 20);
             this.txtFirstna.TabIndex = 10;
             // 
             // txtLastna
             // 
-            this.txtLastna.Location = new System.Drawing.Point(603, 20);
+            this.txtLastna.Location = new System.Drawing.Point(384, 9);
             this.txtLastna.Name = "txtLastna";
             this.txtLastna.Size = new System.Drawing.Size(157, 20);
             this.txtLastna.TabIndex = 11;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(106, 60);
+            this.txtAddress.Location = new System.Drawing.Point(106, 42);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(175, 20);
+            this.txtAddress.Size = new System.Drawing.Size(157, 20);
             this.txtAddress.TabIndex = 12;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(603, 56);
+            this.txtEmail.Location = new System.Drawing.Point(384, 42);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(157, 20);
             this.txtEmail.TabIndex = 13;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(366, 63);
+            this.txtPhone.Location = new System.Drawing.Point(106, 70);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(157, 20);
             this.txtPhone.TabIndex = 14;
@@ -176,14 +177,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 237);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 233);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(751, 285);
             this.dataGridView1.TabIndex = 20;
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(44, 545);
+            this.btnInsert.Location = new System.Drawing.Point(151, 545);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(75, 23);
             this.btnInsert.TabIndex = 21;
@@ -193,7 +194,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(216, 545);
+            this.btnUpdate.Location = new System.Drawing.Point(280, 545);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 22;
@@ -203,7 +204,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(297, 545);
+            this.btnSearch.Location = new System.Drawing.Point(577, 196);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 23;
@@ -213,7 +214,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(421, 545);
+            this.btnDelete.Location = new System.Drawing.Point(405, 545);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 24;
@@ -223,7 +224,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(539, 545);
+            this.btnClear.Location = new System.Drawing.Point(533, 545);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 25;
@@ -233,7 +234,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(665, 545);
+            this.btnLogout.Location = new System.Drawing.Point(666, 545);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 26;
@@ -256,9 +257,9 @@
             "20-30 years",
             "30-40 years",
             "40-50 years"});
-            this.cbAge.Location = new System.Drawing.Point(106, 131);
+            this.cbAge.Location = new System.Drawing.Point(384, 100);
             this.cbAge.Name = "cbAge";
-            this.cbAge.Size = new System.Drawing.Size(146, 21);
+            this.cbAge.Size = new System.Drawing.Size(157, 21);
             this.cbAge.TabIndex = 27;
             // 
             // cbGender
@@ -272,7 +273,7 @@
             "Male",
             "Female",
             "Other"});
-            this.cbGender.Location = new System.Drawing.Point(106, 94);
+            this.cbGender.Location = new System.Drawing.Point(106, 100);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(157, 21);
             this.cbGender.TabIndex = 28;
@@ -288,7 +289,7 @@
             "Cuisine",
             "Bakery",
             "Dessert"});
-            this.cbCooking.Location = new System.Drawing.Point(366, 134);
+            this.cbCooking.Location = new System.Drawing.Point(106, 134);
             this.cbCooking.Name = "cbCooking";
             this.cbCooking.Size = new System.Drawing.Size(157, 21);
             this.cbCooking.TabIndex = 29;
@@ -318,26 +319,17 @@
             this.cbPayment.Size = new System.Drawing.Size(157, 21);
             this.cbPayment.TabIndex = 33;
             // 
-            // lblRegno
-            // 
-            this.lblRegno.AutoSize = true;
-            this.lblRegno.Location = new System.Drawing.Point(12, 23);
-            this.lblRegno.Name = "lblRegno";
-            this.lblRegno.Size = new System.Drawing.Size(80, 13);
-            this.lblRegno.TabIndex = 34;
-            this.lblRegno.Text = "Registration No";
-            // 
             // txtNIC
             // 
-            this.txtNIC.Location = new System.Drawing.Point(366, 91);
+            this.txtNIC.Location = new System.Drawing.Point(384, 70);
             this.txtNIC.Name = "txtNIC";
-            this.txtNIC.Size = new System.Drawing.Size(175, 20);
+            this.txtNIC.Size = new System.Drawing.Size(157, 20);
             this.txtNIC.TabIndex = 35;
             // 
             // lblDOB
             // 
             this.lblDOB.AutoSize = true;
-            this.lblDOB.Location = new System.Drawing.Point(547, 94);
+            this.lblDOB.Location = new System.Drawing.Point(294, 134);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(66, 13);
             this.lblDOB.TabIndex = 38;
@@ -345,15 +337,15 @@
             // 
             // dateOfBirth
             // 
-            this.dateOfBirth.Location = new System.Drawing.Point(603, 91);
+            this.dateOfBirth.Location = new System.Drawing.Point(384, 135);
             this.dateOfBirth.Name = "dateOfBirth";
-            this.dateOfBirth.Size = new System.Drawing.Size(183, 20);
+            this.dateOfBirth.Size = new System.Drawing.Size(170, 20);
             this.dateOfBirth.TabIndex = 39;
             // 
             // lblPayM
             // 
             this.lblPayM.AutoSize = true;
-            this.lblPayM.Location = new System.Drawing.Point(273, 173);
+            this.lblPayM.Location = new System.Drawing.Point(290, 170);
             this.lblPayM.Name = "lblPayM";
             this.lblPayM.Size = new System.Drawing.Size(87, 13);
             this.lblPayM.TabIndex = 40;
@@ -370,9 +362,9 @@
             "Credit/Debit ",
             "PayPal",
             "Bank Transfer"});
-            this.cbPayM.Location = new System.Drawing.Point(366, 170);
+            this.cbPayM.Location = new System.Drawing.Point(384, 167);
             this.cbPayM.Name = "cbPayM";
-            this.cbPayM.Size = new System.Drawing.Size(157, 21);
+            this.cbPayM.Size = new System.Drawing.Size(170, 21);
             this.cbPayM.TabIndex = 41;
             // 
             // lblDateReg
@@ -394,29 +386,47 @@
             // lblNIC
             // 
             this.lblNIC.AutoSize = true;
-            this.lblNIC.Location = new System.Drawing.Point(295, 102);
+            this.lblNIC.Location = new System.Drawing.Point(290, 73);
             this.lblNIC.Name = "lblNIC";
             this.lblNIC.Size = new System.Drawing.Size(65, 13);
             this.lblNIC.TabIndex = 46;
             this.lblNIC.Text = "NIC Number";
             // 
-            // button1
+            // btnRefresh
             // 
-            this.button1.Location = new System.Drawing.Point(125, 545);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 47;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRefresh.Location = new System.Drawing.Point(33, 545);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 47;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(384, 200);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(170, 20);
+            this.txtSearch.TabIndex = 48;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(302, 203);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(76, 13);
+            this.lblSearch.TabIndex = 49;
+            this.lblSearch.Text = "Search Details";
             // 
             // FrmAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(800, 580);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(820, 601);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lblNIC);
             this.Controls.Add(this.dateOfReg);
             this.Controls.Add(this.lblDateReg);
@@ -425,7 +435,6 @@
             this.Controls.Add(this.dateOfBirth);
             this.Controls.Add(this.lblDOB);
             this.Controls.Add(this.txtNIC);
-            this.Controls.Add(this.lblRegno);
             this.Controls.Add(this.cbPayment);
             this.Controls.Add(this.lblPayment);
             this.Controls.Add(this.cbCooking);
@@ -488,7 +497,6 @@
         private System.Windows.Forms.ComboBox cbCooking;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.ComboBox cbPayment;
-        private System.Windows.Forms.Label lblRegno;
         private System.Windows.Forms.TextBox txtNIC;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.DateTimePicker dateOfBirth;
@@ -497,6 +505,8 @@
         private System.Windows.Forms.Label lblDateReg;
         private System.Windows.Forms.DateTimePicker dateOfReg;
         private System.Windows.Forms.Label lblNIC;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblSearch;
     }
 }

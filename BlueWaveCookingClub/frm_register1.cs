@@ -39,11 +39,11 @@ namespace BlueWaveCookingClub
             {
                 SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False");
                 con.Open();
-                string sqlquery = "INSERT INTO tbl_BlueWave VALUES(@Registration_No,@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg )";
+                string sqlquery = "INSERT INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg )";
                 //SqlCommand com = new SqlCommand(sqlquery, con);
                 using (SqlCommand com = new SqlCommand(sqlquery, con))
                 {
-                    com.Parameters.AddWithValue("@Registration_No", txtRegno.Text);
+                   
                     com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
                     com.Parameters.AddWithValue("@Last_Name", txtLastna.Text);
                     com.Parameters.AddWithValue("@Date_Of_Birth", dateOfBirth.Text);
@@ -80,7 +80,22 @@ namespace BlueWaveCookingClub
 
         }
 
+        private void FrmRegister1_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            // Open Login Form
+            FrmLogin loginForm = new FrmLogin();
+
+            // Close the current form
+            this.Close();
+
+            // Show the login form
+            loginForm.Show();
+        }
     }
 }
 

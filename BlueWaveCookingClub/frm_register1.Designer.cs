@@ -56,8 +56,6 @@
             this.cbPayM = new System.Windows.Forms.ComboBox();
             this.lblPayment = new System.Windows.Forms.Label();
             this.cbPayment = new System.Windows.Forms.ComboBox();
-            this.lblRegno = new System.Windows.Forms.Label();
-            this.txtRegno = new System.Windows.Forms.TextBox();
             this.lblDateReg = new System.Windows.Forms.Label();
             this.dateOfReg = new System.Windows.Forms.DateTimePicker();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -332,26 +330,10 @@
             this.cbPayment.Size = new System.Drawing.Size(170, 21);
             this.cbPayment.TabIndex = 59;
             // 
-            // lblRegno
-            // 
-            this.lblRegno.AutoSize = true;
-            this.lblRegno.Location = new System.Drawing.Point(407, 492);
-            this.lblRegno.Name = "lblRegno";
-            this.lblRegno.Size = new System.Drawing.Size(80, 13);
-            this.lblRegno.TabIndex = 17;
-            this.lblRegno.Text = "Registration No";
-            // 
-            // txtRegno
-            // 
-            this.txtRegno.Location = new System.Drawing.Point(405, 508);
-            this.txtRegno.Name = "txtRegno";
-            this.txtRegno.Size = new System.Drawing.Size(121, 20);
-            this.txtRegno.TabIndex = 60;
-            // 
             // lblDateReg
             // 
             this.lblDateReg.AutoSize = true;
-            this.lblDateReg.Location = new System.Drawing.Point(614, 492);
+            this.lblDateReg.Location = new System.Drawing.Point(402, 490);
             this.lblDateReg.Name = "lblDateReg";
             this.lblDateReg.Size = new System.Drawing.Size(67, 13);
             this.lblDateReg.TabIndex = 61;
@@ -359,7 +341,7 @@
             // 
             // dateOfReg
             // 
-            this.dateOfReg.Location = new System.Drawing.Point(611, 508);
+            this.dateOfReg.Location = new System.Drawing.Point(405, 506);
             this.dateOfReg.Name = "dateOfReg";
             this.dateOfReg.Size = new System.Drawing.Size(200, 20);
             this.dateOfReg.TabIndex = 62;
@@ -382,6 +364,7 @@
             this.btnLogout.TabIndex = 24;
             this.btnLogout.Text = "Log Out";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // FrmRegister1
             // 
@@ -394,8 +377,6 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dateOfReg);
             this.Controls.Add(this.lblDateReg);
-            this.Controls.Add(this.txtRegno);
-            this.Controls.Add(this.lblRegno);
             this.Controls.Add(this.cbPayment);
             this.Controls.Add(this.lblPayment);
             this.Controls.Add(this.cbPayM);
@@ -426,6 +407,7 @@
             this.Name = "FrmRegister1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration Form 1";
+            this.Load += new System.EventHandler(this.FrmRegister1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,8 +442,6 @@
         private System.Windows.Forms.ComboBox cbPayM;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.ComboBox cbPayment;
-        private System.Windows.Forms.Label lblRegno;
-        private System.Windows.Forms.TextBox txtRegno;
         private System.Windows.Forms.Label lblDateReg;
         private System.Windows.Forms.DateTimePicker dateOfReg;
         private System.Windows.Forms.Button btnSubmit;
