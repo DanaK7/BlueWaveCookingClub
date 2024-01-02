@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BlueWaveCookingClub
 {
-    public partial class FrmRegister2 : Form
+    public partial class FrmDashboard : Form
     {
-        public FrmRegister2()
+        public FrmDashboard()
         {
             InitializeComponent();
         }
