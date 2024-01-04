@@ -46,7 +46,31 @@ namespace BlueWaveCookingClub
             
             
     }
-}
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            // Open Login Form
+            FrmLogin loginForm = new FrmLogin();
+
+            // Close the current form
+            this.Close();
+
+            // Show the login form
+            loginForm.Show();
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            // Open Admin Panel Form
+            FrmAdminPanel AdminPanelForm = new FrmAdminPanel();
+
+            // Close the current form
+            this.Close();
+
+            // Show the Admin Panel Form
+            AdminPanelForm.Show();
+        }
+    }
 }
     
 

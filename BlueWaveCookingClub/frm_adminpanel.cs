@@ -246,14 +246,14 @@ namespace BlueWaveCookingClub
         private void btnLogout_Click(object sender, EventArgs e)
         {
 
-            // Open Login Form
-            FrmLogin loginForm = new FrmLogin();
+            // Open Dashboard Form
+            FrmDashboard Dashboard = new FrmDashboard();
 
             // Close the current form
             this.Close();
 
             // Show the login form
-            loginForm.Show();
+            Dashboard.Show();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

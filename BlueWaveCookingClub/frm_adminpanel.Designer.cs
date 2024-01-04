@@ -47,7 +47,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.cbAge = new System.Windows.Forms.ComboBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.cbCooking = new System.Windows.Forms.ComboBox();
@@ -232,15 +232,15 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnLogout
+            // btnNext
             // 
-            this.btnLogout.Location = new System.Drawing.Point(666, 545);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 26;
-            this.btnLogout.Text = "Log Out";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnNext.Location = new System.Drawing.Point(666, 545);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 26;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // cbAge
             // 
@@ -440,7 +440,7 @@
             this.Controls.Add(this.cbCooking);
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.cbAge);
-            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSearch);
@@ -491,7 +491,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ComboBox cbAge;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.ComboBox cbCooking;
