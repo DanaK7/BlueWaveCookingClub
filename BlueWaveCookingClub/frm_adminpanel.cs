@@ -129,7 +129,11 @@ namespace BlueWaveCookingClub
 
                 {
                     con.Open();
-                    string sqlquery = "UPDATE INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg)";
+
+
+                    string sqlquery = "UPDATE tbl_BlueWave SET First_Name = @First_Name,Last_Name = @Last_Name, Date_of_Birth = @Date_Of_Birth, Gender = @Gender, Age = @Age, Address = @Address, Phone_Number = @Phone_Number, Email = @Email , Cooking_Clubs = @Cooking_Clubs, Payment_Method = @Payment_Method, Payment = @Payment, Date_of_Reg = @Date_of_Reg WHERE NIC_Number = @NIC_Number";
+
+                    //string sqlquery = "UPDATE INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg)";
                     using (SqlCommand com = new SqlCommand(sqlquery, con))
                     {
                         
@@ -149,8 +153,7 @@ namespace BlueWaveCookingClub
                         com.Parameters.AddWithValue("@Payment_Method", cbPayM.Text);
                         com.Parameters.AddWithValue("@Payment", cbPayment.Text);
                         com.Parameters.AddWithValue("@Date_of_Reg", dateOfReg.Text);
-
-
+                       
 
 
 
