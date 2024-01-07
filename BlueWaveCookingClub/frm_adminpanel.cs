@@ -18,7 +18,12 @@ namespace BlueWaveCookingClub
         {
             InitializeComponent();
         }
-
+        private int _Registration_No;
+        public int Registration_No
+        {
+            get => _Registration_No;
+            set => _Registration_No = value;
+        }
         private void btnInsert_Click(object sender, EventArgs e)
         {
 
@@ -128,50 +133,65 @@ namespace BlueWaveCookingClub
                 try
 
                 {
-                    con.Open();
+                        con.Open();
 
-
-                    string sqlquery = "UPDATE tbl_BlueWave SET First_Name = @First_Name,Last_Name = @Last_Name, Date_of_Birth = @Date_Of_Birth, Gender = @Gender, Age = @Age, Address = @Address, Phone_Number = @Phone_Number, Email = @Email , Cooking_Clubs = @Cooking_Clubs, Payment_Method = @Payment_Method, Payment = @Payment, Date_of_Reg = @Date_of_Reg WHERE NIC_Number = @NIC_Number";
-
-                    //string sqlquery = "UPDATE INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg)";
-                    using (SqlCommand com = new SqlCommand(sqlquery, con))
+                    if (dataGridView1.SelectedRows.Count == 0)
                     {
-                        
-                        com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
-                        com.Parameters.AddWithValue("@Last_Name", txtLastna.Text);
-                        com.Parameters.AddWithValue("@Date_Of_Birth", dateOfBirth.Text);
-                        com.Parameters.AddWithValue("@Gender", cbGender.Text);
-                        com.Parameters.AddWithValue("@Age", cbAge.Text);
-                        com.Parameters.AddWithValue("@Address", txtAddress.Text);
-
-                        com.Parameters.AddWithValue("@Phone_Number", txtPhone.Text);
-                        com.Parameters.AddWithValue("@Email", txtEmail.Text);
-                        com.Parameters.AddWithValue("@NIC_Number", txtNIC.Text);
-
-                        com.Parameters.AddWithValue("@Cooking_Clubs", cbCooking.Text);
-
-                        com.Parameters.AddWithValue("@Payment_Method", cbPayM.Text);
-                        com.Parameters.AddWithValue("@Payment", cbPayment.Text);
-                        com.Parameters.AddWithValue("@Date_of_Reg", dateOfReg.Text);
-                       
-
-
-
-
-
-
-
-
-
-
-                        com.ExecuteNonQuery();
-                        MessageBox.Show("Data Updated successfully!");
+                        MessageBox.Show("Please select a member to update.", "No Member Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;  // Exit the method to prevent further execution
                     }
+                    int selectedRegistrationNo = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                  
+                        string sqlquery = "UPDATE tbl_BlueWave SET First_Name = @First_Name,Last_Name = @Last_Name, Date_of_Birth = @Date_Of_Birth, Gender = @Gender, Age = @Age, Address = @Address, Phone_Number = @Phone_Number, Email = @Email , Cooking_Clubs = @Cooking_Clubs, Payment_Method = @Payment_Method, Payment = @Payment, Date_of_Reg = @Date_of_Reg WHERE Registration_No = @Registration_No";
+
+                        //string sqlquery = "UPDATE INTO tbl_BlueWave VALUES(@First_Name, @Last_Name, @Date_Of_Birth, @Gender, @Age, @Address, @Phone_Number, @Email, @NIC_Number, @Cooking_Clubs, @Payment_Method, @Payment, @Date_of_Reg)";
+                        using (SqlCommand com = new SqlCommand(sqlquery, con))
+                        {
+
+
+                            com.Parameters.AddWithValue("@First_Name", txtFirstna.Text);
+                            com.Parameters.AddWithValue("@Last_Name", txtLastna.Text);
+                            com.Parameters.AddWithValue("@Date_Of_Birth", dateOfBirth.Text);
+                            com.Parameters.AddWithValue("@Gender", cbGender.Text);
+                            com.Parameters.AddWithValue("@Age", cbAge.Text);
+                            com.Parameters.AddWithValue("@Address", txtAddress.Text);
+
+                            com.Parameters.AddWithValue("@Phone_Number", txtPhone.Text);
+                            com.Parameters.AddWithValue("@Email", txtEmail.Text);
+                            com.Parameters.AddWithValue("@NIC_Number", txtNIC.Text);
+
+                            com.Parameters.AddWithValue("@Cooking_Clubs", cbCooking.Text);
+
+                            com.Parameters.AddWithValue("@Payment_Method", cbPayM.Text);
+                            com.Parameters.AddWithValue("@Payment", cbPayment.Text);
+                            com.Parameters.AddWithValue("@Date_of_Reg", dateOfReg.Text);
+                            com.Parameters.AddWithValue("@Registration_No", selectedRegistrationNo);
+
+
+
+
+
+
+
+
+
+
+                            com.ExecuteNonQuery();
+                            MessageBox.Show("Data Updated successfully!");
+                        }
                 }
                 catch (SqlException ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
+           
+            
+            
+            
+            
+            
+            
+            
             }
             
 
@@ -261,29 +281,79 @@ namespace BlueWaveCookingClub
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            /* SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True");
-             con.Open();
-             SqlCommand cmd = new SqlCommand("Delete UserTab Where FirstName No=@First_Name", con);
-             cmd.Parameters.AddWithValue("@First_Name", int.Parse (txtFirstna.Text));
-             cmd.ExecuteNonQuery();
-             con.Close();
-             MessageBox.Show("Successfully Deleted");*/
-            int rowIndex = dataGridView1.SelectedRows[0].Index;
+            /* int rowIndex = dataGridView1.SelectedRows[0].Index;
 
-            if(rowIndex >= 0)
+             if(rowIndex >= 0)
+             {
+                 DialogResult result = MessageBox.Show("Are you sure, Do you really want to Delete this record...?", "Confirmation", MessageBoxButtons.YesNo);
+
+                 if(result == DialogResult.Yes)
+                 {
+
+                     try
+                     {
+                         using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
+                         {
+                             con.Open();
+
+                             string Registration_No_v = dataGridView1.Rows[rowIndex].Cells["Registration_No"].Value.ToString();
+                             string sql = "DELETE FROM tbl_BlueWave WHERE Registration_No = @Registration_No";
+                             SqlCommand cmd = new SqlCommand(sql, con);
+                             cmd.Parameters.AddWithValue("@Registration_No", Registration_No_v);
+                             int rowsAffected = cmd.ExecuteNonQuery();
+
+                             if (rowsAffected > 0)
+                             {
+                                 MessageBox.Show("Member deleted successfully!");
+                             }
+                             else
+                             {
+                                 MessageBox.Show("Failed to delete member.");
+                             }
+
+                         }
+
+
+
+
+                     }
+                     catch (SqlException ex)
+                     {
+                         MessageBox.Show("Error deleting member: " + ex.Message);
+                     }
+
+
+
+
+
+
+                 }
+             }
+             else
+             {
+                 MessageBox.Show("Please select a member to delete.");
+             }
+            */
+            if (dataGridView1.SelectedRows.Count == 0)
             {
-                DialogResult result = MessageBox.Show("Are you sure, Do you really want to Delete this record...?", "Confirmation", MessageBoxButtons.YesNo);
-                
-                if(result == DialogResult.Yes)
+                MessageBox.Show("Please select one or more members to delete.", "No Member Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Confirm deletion
+            DialogResult result = MessageBox.Show("Are you sure you want to delete the selected member(s)?", "Confirmation", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                try
                 {
-
-                    try
+                    using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
                     {
-                        using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
-                        {
-                            con.Open();
+                        con.Open();
 
-                            string Registration_No_v = dataGridView1.Rows[rowIndex].Cells["Registration_No"].Value.ToString();
+                        foreach (DataGridViewRow row in dataGridView1.SelectedRows)  // Handle multiple selections
+                        {
+                            string Registration_No_v = row.Cells["Registration_No"].Value.ToString();
                             string sql = "DELETE FROM tbl_BlueWave WHERE Registration_No = @Registration_No";
                             SqlCommand cmd = new SqlCommand(sql, con);
                             cmd.Parameters.AddWithValue("@Registration_No", Registration_No_v);
@@ -291,37 +361,23 @@ namespace BlueWaveCookingClub
 
                             if (rowsAffected > 0)
                             {
-                                MessageBox.Show("Member deleted successfully!");
+                                // Optionally remove the row visually from the grid
+                                dataGridView1.Rows.Remove(row);
                             }
                             else
                             {
-                                MessageBox.Show("Failed to delete member.");
+                                MessageBox.Show("Failed to delete member with Registration No: " + Registration_No_v, "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-
                         }
-                       
 
-
-
+                        MessageBox.Show("Selected members deleted successfully!");
                     }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show("Error deleting member: " + ex.Message);
-                    }
-
-
-
-
-
-
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error deleting member(s): " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
-            {
-                MessageBox.Show("Please select a member to delete.");
-            }
-
-
 
         }
 
