@@ -111,7 +111,7 @@ namespace BlueWaveCookingClub
 
                 lblMale.Text = $"Male: {maleCount}";
 
-                lblFemale.Text =$"Female{femaleCount}";
+                lblFemale.Text =$"Female: {femaleCount}";
 
 
 
