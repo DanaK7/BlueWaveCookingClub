@@ -86,28 +86,129 @@ namespace BlueWaveCookingClub
                 }
 
             }
-       
-        
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+           using(SqlConnection connection1 = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
+            {
+                connection1.Open();
+
+                string queryMale = "SELECT COUNT(*) AS MaleMemberCount FROM tbl_BlueWave WHERE Gender = 'Male'";
+                string queryFemale = "SELECT COUNT(*) AS MaleMemberCount FROM tbl_BlueWave WHERE Gender = 'Female'";
+
+                int maleCount = 0;
+                int femaleCount = 0;
+
+                using (SqlCommand commandMale = new SqlCommand(queryMale, connection1))
+                {
+                    maleCount = (int)commandMale.ExecuteScalar();
+                }
+
+                using (SqlCommand commandFemale = new SqlCommand(queryFemale, connection1))
+                {
+                    femaleCount = (int)commandFemale.ExecuteScalar();
+                }
+
+                int totalMembers = maleCount + femaleCount;
+
+                lblMale.Text = $"Male: {maleCount}";
+
+                lblFemale.Text =$"Female{femaleCount}";
+
+
+
+
+
+
+
+            }
+
+            using (SqlConnection connection1 = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
+            {
+                connection1.Open();
+
+                string queryCuisine = "SELECT COUNT(*) AS CuisineCount FROM tbl_BlueWave WHERE Gender = 'Cuisine'";
+                string queryDessert = "SELECT COUNT(*) AS DessertCount FROM tbl_BlueWave WHERE Gender = 'Dessert'";
+                string queryBakery = "SELECT COUNT(*) AS BakeryCount FROM tbl_BlueWave WHERE Gender = 'Bakery'";
+
+                int CuisineCount = 0;
+                int DessertCount = 0;
+                int BakeryCount = 0;
+
+
+                using (SqlCommand commandcuisine = new SqlCommand(queryCuisine, connection1))
+                {
+                    CuisineCount = (int)commandcuisine.ExecuteScalar();
+                }
+
+                using (SqlCommand commanddessert = new SqlCommand(queryDessert, connection1))
+                {
+                    DessertCount = (int)commanddessert.ExecuteScalar();
+                }
+
+                using (SqlCommand commandbakery = new SqlCommand(queryBakery, connection1))
+                {
+                    BakeryCount = (int)commandbakery.ExecuteScalar();
+                }
+
+
+
+                lblCuisine.Text = $"Cuisine: {CuisineCount}";
+                lblDessert.Text =$"Dessert:{DessertCount}";
+                lblBakery.Text = $"Bakery:{BakeryCount}";
+
+            }
+
+            using (SqlConnection connection1 = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
+            {
+                connection1.Open();
+
+                string querypaid = "SELECT COUNT(*) AS PaidCount FROM tbl_BlueWave WHERE Payment_Method = 'Paid'";
+                string querypaynow = "SELECT COUNT(*) AS paynowCount FROM tbl_BlueWave WHERE Payment_Method = 'Pay Now'";
+                string querypaylater = "SELECT COUNT(*) AS paylaterCount FROM tbl_BlueWave WHERE Payment_Method = 'Pay Later'";
+
+                int paidCount = 0;
+                int paynowCount = 0;
+                int paylaterCount = 0;
+
+
+                using (SqlCommand commandpaid = new SqlCommand(querypaid, connection1))
+                {
+                    paidCount = (int)commandpaid.ExecuteScalar();
+                }
+
+                using (SqlCommand commandpaynow = new SqlCommand(querypaynow, connection1))
+                {
+                    paynowCount = (int)commandpaynow.ExecuteScalar();
+                }
+
+                using (SqlCommand commandpaylater = new SqlCommand(querypaylater, connection1))
+                {
+                    paylaterCount = (int)commandpaylater.ExecuteScalar();
+                }
+
+
+
+                lblPaid.Text = $"Paid: {paidCount}";
+                lblPayNow.Text = $"Pay now :{paynowCount}";
+                lblPayLater.Text = $"Pay Later:{paylaterCount}";
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }

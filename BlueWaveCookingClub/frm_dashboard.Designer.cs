@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.panMembers = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblFemale = new System.Windows.Forms.Label();
             this.lblMale = new System.Windows.Forms.Label();
             this.lblTotMembers = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.lblPayment = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panMembers.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -84,6 +84,16 @@
             this.panMembers.Name = "panMembers";
             this.panMembers.Size = new System.Drawing.Size(281, 106);
             this.panMembers.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(186, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Members";
             // 
             // lblFemale
             // 
@@ -134,9 +144,9 @@
             this.lblDessert.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDessert.Location = new System.Drawing.Point(149, 38);
             this.lblDessert.Name = "lblDessert";
-            this.lblDessert.Size = new System.Drawing.Size(58, 13);
+            this.lblDessert.Size = new System.Drawing.Size(50, 13);
             this.lblDessert.TabIndex = 3;
-            this.lblDessert.Text = "Dessert :";
+            this.lblDessert.Text = "Dessert";
             // 
             // lblCuisine
             // 
@@ -144,9 +154,9 @@
             this.lblCuisine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuisine.Location = new System.Drawing.Point(14, 38);
             this.lblCuisine.Name = "lblCuisine";
-            this.lblCuisine.Size = new System.Drawing.Size(56, 13);
+            this.lblCuisine.Size = new System.Drawing.Size(48, 13);
             this.lblCuisine.TabIndex = 4;
-            this.lblCuisine.Text = "Cuisine :";
+            this.lblCuisine.Text = "Cuisine";
             // 
             // lblBakery
             // 
@@ -154,9 +164,9 @@
             this.lblBakery.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBakery.Location = new System.Drawing.Point(14, 75);
             this.lblBakery.Name = "lblBakery";
-            this.lblBakery.Size = new System.Drawing.Size(54, 13);
+            this.lblBakery.Size = new System.Drawing.Size(46, 13);
             this.lblBakery.TabIndex = 5;
-            this.lblBakery.Text = "Bakery :";
+            this.lblBakery.Text = "Bakery";
             // 
             // lblClubs
             // 
@@ -241,16 +251,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(186, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Members";
             // 
             // FrmDashboard
             // 
