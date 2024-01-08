@@ -32,21 +32,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.panMembers = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblTotMembers = new System.Windows.Forms.Label();
-            this.lblMale = new System.Windows.Forms.Label();
             this.lblFemale = new System.Windows.Forms.Label();
-            this.lblClubs = new System.Windows.Forms.Label();
+            this.lblMale = new System.Windows.Forms.Label();
+            this.lblTotMembers = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lblDessert = new System.Windows.Forms.Label();
             this.lblCuisine = new System.Windows.Forms.Label();
             this.lblBakery = new System.Windows.Forms.Label();
-            this.lblPayment = new System.Windows.Forms.Label();
+            this.lblClubs = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.lblPayLater = new System.Windows.Forms.Label();
             this.lblPaid = new System.Windows.Forms.Label();
             this.lblPayNow = new System.Windows.Forms.Label();
+            this.lblPayment = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panMembers.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -75,6 +76,7 @@
             // panMembers
             // 
             this.panMembers.BackColor = System.Drawing.Color.White;
+            this.panMembers.Controls.Add(this.label1);
             this.panMembers.Controls.Add(this.lblFemale);
             this.panMembers.Controls.Add(this.lblMale);
             this.panMembers.Controls.Add(this.lblTotMembers);
@@ -83,29 +85,25 @@
             this.panMembers.Size = new System.Drawing.Size(281, 106);
             this.panMembers.TabIndex = 3;
             // 
-            // panel3
+            // lblFemale
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.lblDessert);
-            this.panel3.Controls.Add(this.lblCuisine);
-            this.panel3.Controls.Add(this.lblBakery);
-            this.panel3.Controls.Add(this.lblClubs);
-            this.panel3.Location = new System.Drawing.Point(375, 176);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(281, 105);
-            this.panel3.TabIndex = 4;
+            this.lblFemale.AutoSize = true;
+            this.lblFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFemale.Location = new System.Drawing.Point(28, 74);
+            this.lblFemale.Name = "lblFemale";
+            this.lblFemale.Size = new System.Drawing.Size(55, 13);
+            this.lblFemale.TabIndex = 2;
+            this.lblFemale.Text = "Female :";
             // 
-            // panel4
+            // lblMale
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.lblPayLater);
-            this.panel4.Controls.Add(this.lblPaid);
-            this.panel4.Controls.Add(this.lblPayNow);
-            this.panel4.Controls.Add(this.lblPayment);
-            this.panel4.Location = new System.Drawing.Point(375, 303);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(281, 103);
-            this.panel4.TabIndex = 5;
+            this.lblMale.AutoSize = true;
+            this.lblMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMale.Location = new System.Drawing.Point(28, 36);
+            this.lblMale.Name = "lblMale";
+            this.lblMale.Size = new System.Drawing.Size(42, 13);
+            this.lblMale.TabIndex = 1;
+            this.lblMale.Text = "Male :";
             // 
             // lblTotMembers
             // 
@@ -118,36 +116,17 @@
             this.lblTotMembers.TabIndex = 0;
             this.lblTotMembers.Text = "Total Members :";
             // 
-            // lblMale
+            // panel3
             // 
-            this.lblMale.AutoSize = true;
-            this.lblMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMale.Location = new System.Drawing.Point(28, 36);
-            this.lblMale.Name = "lblMale";
-            this.lblMale.Size = new System.Drawing.Size(42, 13);
-            this.lblMale.TabIndex = 1;
-            this.lblMale.Text = "Male :";
-            // 
-            // lblFemale
-            // 
-            this.lblFemale.AutoSize = true;
-            this.lblFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFemale.Location = new System.Drawing.Point(28, 74);
-            this.lblFemale.Name = "lblFemale";
-            this.lblFemale.Size = new System.Drawing.Size(55, 13);
-            this.lblFemale.TabIndex = 2;
-            this.lblFemale.Text = "Female :";
-            // 
-            // lblClubs
-            // 
-            this.lblClubs.AutoSize = true;
-            this.lblClubs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClubs.ForeColor = System.Drawing.Color.Black;
-            this.lblClubs.Location = new System.Drawing.Point(101, 11);
-            this.lblClubs.Name = "lblClubs";
-            this.lblClubs.Size = new System.Drawing.Size(79, 13);
-            this.lblClubs.TabIndex = 3;
-            this.lblClubs.Text = "Total Clubs :";
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.lblDessert);
+            this.panel3.Controls.Add(this.lblCuisine);
+            this.panel3.Controls.Add(this.lblBakery);
+            this.panel3.Controls.Add(this.lblClubs);
+            this.panel3.Location = new System.Drawing.Point(375, 176);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(281, 105);
+            this.panel3.TabIndex = 4;
             // 
             // lblDessert
             // 
@@ -179,16 +158,28 @@
             this.lblBakery.TabIndex = 5;
             this.lblBakery.Text = "Bakery :";
             // 
-            // lblPayment
+            // lblClubs
             // 
-            this.lblPayment.AutoSize = true;
-            this.lblPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayment.ForeColor = System.Drawing.Color.Black;
-            this.lblPayment.Location = new System.Drawing.Point(105, 9);
-            this.lblPayment.Name = "lblPayment";
-            this.lblPayment.Size = new System.Drawing.Size(59, 13);
-            this.lblPayment.TabIndex = 6;
-            this.lblPayment.Text = "Payment ";
+            this.lblClubs.AutoSize = true;
+            this.lblClubs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClubs.ForeColor = System.Drawing.Color.Black;
+            this.lblClubs.Location = new System.Drawing.Point(101, 11);
+            this.lblClubs.Name = "lblClubs";
+            this.lblClubs.Size = new System.Drawing.Size(79, 13);
+            this.lblClubs.TabIndex = 3;
+            this.lblClubs.Text = "Total Clubs :";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.lblPayLater);
+            this.panel4.Controls.Add(this.lblPaid);
+            this.panel4.Controls.Add(this.lblPayNow);
+            this.panel4.Controls.Add(this.lblPayment);
+            this.panel4.Location = new System.Drawing.Point(375, 303);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(281, 103);
+            this.panel4.TabIndex = 5;
             // 
             // lblPayLater
             // 
@@ -220,6 +211,17 @@
             this.lblPayNow.TabIndex = 8;
             this.lblPayNow.Text = "Pay Now :";
             // 
+            // lblPayment
+            // 
+            this.lblPayment.AutoSize = true;
+            this.lblPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPayment.ForeColor = System.Drawing.Color.Black;
+            this.lblPayment.Location = new System.Drawing.Point(105, 9);
+            this.lblPayment.Name = "lblPayment";
+            this.lblPayment.Size = new System.Drawing.Size(59, 13);
+            this.lblPayment.TabIndex = 6;
+            this.lblPayment.Text = "Payment ";
+            // 
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(378, 419);
@@ -240,6 +242,16 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(186, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Members";
+            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,6 +268,7 @@
             this.Name = "FrmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.FrmDashboard_Load);
             this.panMembers.ResumeLayout(false);
             this.panMembers.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -287,5 +300,6 @@
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label label1;
     }
 }

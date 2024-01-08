@@ -70,6 +70,45 @@ namespace BlueWaveCookingClub
             // Show the Admin Panel Form
             AdminPanelForm.Show();
         }
+
+        private void FrmDashboard_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) AS TotalMemberCount FROM tbl_BlueWave";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    int membercount = (int)command.ExecuteScalar();
+                    label1.Text = membercount.ToString();
+
+                }
+
+            }
+       
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        }
     }
 }
     
