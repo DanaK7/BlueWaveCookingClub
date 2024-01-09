@@ -372,7 +372,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(860, 602);
+            this.ClientSize = new System.Drawing.Size(860, 581);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dateOfReg);

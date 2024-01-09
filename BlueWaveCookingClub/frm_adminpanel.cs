@@ -383,14 +383,44 @@ namespace BlueWaveCookingClub
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("Select * from UserTab Where Registration No=@Registration_No", con);
-            cmd.Parameters.AddWithValue("@First_Name", int.Parse(txtFirstna.Text));
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource=dt;
+            /*  SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True");
+              con.Open();
+              SqlCommand cmd = new SqlCommand("Select * from UserTab Where Registration No=@Registration_No", con);
+              cmd.Parameters.AddWithValue("@First_Name", int.Parse(txtFirstna.Text));
+              SqlDataAdapter da = new SqlDataAdapter(cmd);
+              DataTable dt = new DataTable();
+              da.Fill(dt);
+              dataGridView1.DataSource=dt;*/
+
+            string registrationId = txtSearch.Text.Trim();
+            if (!string.IsNullOrEmpty(registrationId))
+            {
+                try
+                {
+                    using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V2ASSM\\SQLEXPRESS;Initial Catalog=BlueWave;Integrated Security=True;Encrypt=False"))
+                    {
+                        con.Open();
+                        string sql = @"SELECT * FROM tbl_BlueWave WHERE Registration_No LIKE @Registration_NO";
+                        SqlCommand cmd = new SqlCommand(sql, con);
+                        cmd.Parameters.AddWithValue("@Registration_NO", "%" + registrationId + "%");
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error searching data: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a registration ID.");
+            }
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -413,6 +443,11 @@ namespace BlueWaveCookingClub
 
 
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
